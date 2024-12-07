@@ -1,215 +1,204 @@
-/* Global Styles */
+/* Reset some default browser styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f7f6;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Navbar Styles */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #2d3e50;
-  padding: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.navbar .logo img {
-  width: 120px;
-}
-
-.navbar nav ul {
-  display: flex;
-  list-style-type: none;
-}
-
-.navbar nav ul li {
-  margin: 0 20px;
-}
-
-.navbar nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-/* Hero Section */
-.hero {
-  background: url('images/hero-bg.jpg') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #121212;
   color: #fff;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Container Styling */
+.container {
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Hero Section Styling */
+.hero {
+  background-color: #1f1f1f;
+  padding: 3rem;
   text-align: center;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero .logo {
+  width: 150px;
+  margin-bottom: 1rem;
 }
 
 .hero h1 {
-  font-size: 60px;
-  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 24px;
-  margin: 20px 0;
+  font-size: 1.2rem;
 }
 
-.cta-btn {
-  background-color: #ff7f50;
-  padding: 15px 30px;
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.cta-btn:hover {
-  background-color: #ff4b2b;
-}
-
-/* About Section */
-.about {
-  background-color: #fff;
-  padding: 50px 10%;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.about p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #555;
-}
-
-/* Features Section */
+/* Features Section Styling */
 .features {
-  background-color: #f9f9f9;
-  padding: 50px 10%;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .features h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-.feature-cards {
+.features-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.feature-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 280px;
-  margin: 20px;
-  padding: 30px;
+.feature {
+  background-color: #333;
+  padding: 1.5rem;
+  width: 250px;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.feature h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.feature p {
+  font-size: 1.1rem;
+}
+
+/* Use Cases Section Styling */
+.use-cases {
   text-align: center;
+  margin-bottom: 3rem;
 }
 
-.feature-card img {
-  width: 50px;
-  margin-bottom: 20px;
+.use-cases h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-.feature-card h3 {
-  font-size: 24px;
-  color: #2d3e50;
-  margin-bottom: 15px;
-}
-
-.feature-card p {
-  font-size: 16px;
-  color: #777;
-}
-
-/* Setup Section */
-.setup {
-  background-color: #fff;
-  padding: 50px 10%;
-}
-
-.setup h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.setup-steps {
+.use-cases-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.step {
-  background-color: #e7f7f7;
-  padding: 30px;
-  margin: 20px;
-  border-radius: 10px;
-  width: 280px;
+.use-case {
+  background-color: #333;
+  padding: 1.5rem;
+  width: 250px;
+  border-radius: 8px;
+  margin-bottom: 2rem;
 }
 
-.step h3 {
-  font-size: 24px;
-  color: #ff7f50;
-  margin-bottom: 15px;
+.use-case h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
-.step pre {
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  color: #333;
+.use-case p {
+  font-size: 1.1rem;
 }
 
-/* Documentation Section */
-.docs {
-  background-color: #f9f9f9;
-  padding: 50px 10%;
+/* Documentation Section Styling */
+.documentation {
+  margin-bottom: 3rem;
+}
+
+.documentation h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.documentation h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.documentation ul {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.documentation li {
+  margin-bottom: 0.5rem;
+}
+
+/* Pricing Section Styling */
+.pricing {
   text-align: center;
+  margin-bottom: 3rem;
 }
 
-.docs h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+.pricing h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-/* Contact Section */
+.pricing-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.pricing-plan {
+  background-color: #333;
+  padding: 2rem;
+  width: 300px;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.pricing-plan h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-plan p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Contact Section Styling */
 .contact {
-  background-color: #fff;
-  padding: 50px 10%;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
 .contact h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.contact p {
-  font-size: 18px;
+.contact ul {
+  font-size: 1.2rem;
 }
 
-/* Footer */
+.contact li {
+  margin-bottom: 0.8rem;
+}
+
+/* Footer Section Styling */
 .footer {
-  background-color: #2d3e50;
-  color: white;
   text-align: center;
-  padding: 20px;
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #aaa;
 }
