@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "9876:80"
+    volumes:
+      - ./images:/usr/share/nginx/html/images
+      - ./index.html:/usr/share/nginx/html/index.html
+      - ./styles.css:/usr/share/nginx/html/styles.css
+    networks:
+      - webnet
+    container_name: kubelife_web_app
+    restart: unless-stopped
+
+networks:
+  webnet:
+    driver: bridge
