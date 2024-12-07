@@ -1,72 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KubeLife - Next-Level Hosting</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>KubeLife - Next-Level Automated Hosting</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.0.0/dist/lazyload.min.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="images/kublife_logo.png" alt="KubeLife Logo">
-            <h1>KubeLife</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/kublife_logo.png" alt="KubeLife Logo" class="logo-img">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#docs">Docs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Next-Level Hosting</h2>
-            <p>Transform your cloud infrastructure with the power of Kubernetes and automation.</p>
-            <a href="#about" class="cta-btn">Learn More</a>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to KubeLife</h1>
+      <p>Your Ultimate Solution for Automated Kubernetes & Docker Management</p>
+      <a href="#setup" class="cta-btn">Get Started</a>
+    </div>
+  </section>
 
-    <section id="features" class="features">
-        <h2 class="section-title">Our Features</h2>
-        <div class="feature-cards">
-            <div class="feature-card">
-                <img src="images/feature-icon1.svg" alt="Scalability Icon">
-                <h3>Scalability</h3>
-                <p>Seamlessly scale your applications with minimal effort. Increase your resource allocation as your traffic grows.</p>
-            </div>
-            <div class="feature-card">
-                <img src="images/feature-icon2.svg" alt="Automation Icon">
-                <h3>Automation</h3>
-                <p>Automate your deployments, scaling, and management tasks with Kubernetes and Terraform.</p>
-            </div>
-            <div class="feature-card">
-                <img src="images/feature-icon3.svg" alt="Security Icon">
-                <h3>Security</h3>
-                <p>Ensure that your application is secure with built-in security features, automated patching, and best practices.</p>
-            </div>
-        </div>
-    </section>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About KubeLife</h2>
+      <p>Built to simplify Docker and Kubernetes management, KubeLife automates key DevOps tasks like scaling, CI/CD integration, and monitoring. It's a complete solution for next-level hosting and container orchestration.</p>
+    </div>
+  </section>
 
-    <section id="about" class="about">
-        <div class="about-content">
-            <h2>About KubeLife</h2>
-            <p>KubeLife is the next-gen platform that powers the modern DevOps world. With fully automated deployments and scaling, it makes managing your cloud infrastructure simple and reliable.</p>
-            <p>Using Kubernetes at its core, KubeLife offers seamless orchestration, continuous integration, and continuous delivery, making your cloud journey smoother than ever.</p>
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Key Features</h2>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <img src="images/docker-icon.png" alt="Docker Icon">
+          <h3>Docker & Kubernetes Management</h3>
+          <p>Easily deploy and manage containers at scale with automated orchestration.</p>
         </div>
-    </section>
+        <div class="feature-card">
+          <img src="images/cicd-icon.png" alt="CI/CD Icon">
+          <h3>CI/CD Integration</h3>
+          <p>Seamlessly integrate with Jenkins, GitLab, and other tools to streamline your deployment pipeline.</p>
+        </div>
+        <div class="feature-card">
+          <img src="images/monitoring-icon.png" alt="Monitoring Icon">
+          <h3>Advanced Monitoring</h3>
+          <p>Use built-in Prometheus and Grafana for real-time metrics and alerts.</p>
+        </div>
+        <div class="feature-card">
+          <img src="images/scale-icon.png" alt="Scale Icon">
+          <h3>Scalability</h3>
+          <p>Auto-scale your applications using Kubernetes to meet the changing demands.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer id="contact" class="footer">
-        <p>© 2024 KubeLife. All Rights Reserved.</p>
-        <div class="social-links">
-            <a href="#" class="social-link">LinkedIn</a>
-            <a href="#" class="social-link">Twitter</a>
-            <a href="#" class="social-link">GitHub</a>
+  <!-- Setup Section -->
+  <section id="setup" class="setup">
+    <div class="container">
+      <h2>Getting Started with KubeLife</h2>
+      <p>Follow these simple steps to set up KubeLife on your machine.</p>
+      <div class="setup-steps">
+        <div class="step">
+          <h3>Step 1: Install Docker</h3>
+          <pre><code>sudo apt install docker.io</code></pre>
         </div>
-    </footer>
+        <div class="step">
+          <h3>Step 2: Install Docker Compose</h3>
+          <pre><code>sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose</code></pre>
+        </div>
+        <div class="step">
+          <h3>Step 3: Clone KubeLife Repository</h3>
+          <pre><code>git clone https://github.com/kublife/kublife.git</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentation Section -->
+  <section id="docs" class="docs">
+    <div class="container">
+      <h2>Documentation</h2>
+      <p>For a detailed guide and advanced configurations, visit our <a href="docs.html">Documentation Page</a>.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>If you need assistance or have any questions, reach out to us at <strong>support@kublife.com</strong>.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 KubeLife. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
