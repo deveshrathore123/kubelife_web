@@ -4,119 +4,141 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>KubeLife - Next-Level Automated Hosting</title>
+  <title>KubeLife | Next-Level Hosting</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.0.0/dist/lazyload.min.js"></script>
 </head>
 <body>
-  
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="images/kublife_logo.png" alt="KubeLife Logo" class="logo-img">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#setup">Setup</a></li>
-        <li><a href="#docs">Docs</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="images/logo.png" alt="KubeLife Logo" class="logo">
+        <h1>Welcome to KubeLife</h1>
+        <p>Your next-level solution for Kubernetes, CI/CD, AWS Monitoring, and Docker automation.</p>
+      </div>
+    </section>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Welcome to KubeLife</h1>
-      <p>Your Ultimate Solution for Automated Kubernetes & Docker Management</p>
-      <a href="#setup" class="cta-btn">Get Started</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About KubeLife</h2>
-      <p>Built to simplify Docker and Kubernetes management, KubeLife automates key DevOps tasks like scaling, CI/CD integration, and monitoring. It's a complete solution for next-level hosting and container orchestration.</p>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="features">
-    <div class="container">
+    <!-- Features Section -->
+    <section class="features">
       <h2>Key Features</h2>
-      <div class="feature-cards">
-        <div class="feature-card">
-          <img src="images/docker-icon.png" alt="Docker Icon">
-          <h3>Docker & Kubernetes Management</h3>
-          <p>Easily deploy and manage containers at scale with automated orchestration.</p>
+      <div class="features-container">
+        <div class="feature">
+          <h3>Docker Integration</h3>
+          <p>Effortlessly deploy and manage applications with Docker, fully integrated into the KubeLife ecosystem.</p>
         </div>
-        <div class="feature-card">
-          <img src="images/cicd-icon.png" alt="CI/CD Icon">
-          <h3>CI/CD Integration</h3>
-          <p>Seamlessly integrate with Jenkins, GitLab, and other tools to streamline your deployment pipeline.</p>
+        <div class="feature">
+          <h3>Automated Kubernetes Setup</h3>
+          <p>Set up your Kubernetes clusters automatically with ease and scale as needed.</p>
         </div>
-        <div class="feature-card">
-          <img src="images/monitoring-icon.png" alt="Monitoring Icon">
-          <h3>Advanced Monitoring</h3>
-          <p>Use built-in Prometheus and Grafana for real-time metrics and alerts.</p>
+        <div class="feature">
+          <h3>CI/CD Pipelines</h3>
+          <p>Automate your code delivery process and deploy faster with integrated CI/CD pipelines.</p>
         </div>
-        <div class="feature-card">
-          <img src="images/scale-icon.png" alt="Scale Icon">
-          <h3>Scalability</h3>
-          <p>Auto-scale your applications using Kubernetes to meet the changing demands.</p>
+        <div class="feature">
+          <h3>AWS Monitoring</h3>
+          <p>Monitor AWS infrastructure seamlessly and gain insights into the performance of your resources.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Setup Section -->
-  <section id="setup" class="setup">
-    <div class="container">
-      <h2>Getting Started with KubeLife</h2>
-      <p>Follow these simple steps to set up KubeLife on your machine.</p>
-      <div class="setup-steps">
-        <div class="step">
-          <h3>Step 1: Install Docker</h3>
-          <pre><code>sudo apt install docker.io</code></pre>
+        <div class="feature">
+          <h3>Multi-Cloud Support</h3>
+          <p>Deploy and manage your infrastructure across AWS, Azure, and Google Cloud platforms with ease.</p>
         </div>
-        <div class="step">
-          <h3>Step 2: Install Docker Compose</h3>
-          <pre><code>sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose</code></pre>
-        </div>
-        <div class="step">
-          <h3>Step 3: Clone KubeLife Repository</h3>
-          <pre><code>git clone https://github.com/kublife/kublife.git</code></pre>
+        <div class="feature">
+          <h3>Secure Container Management</h3>
+          <p>Manage your containers securely with automated security policies and real-time vulnerability scans.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Documentation Section -->
-  <section id="docs" class="docs">
-    <div class="container">
+    <!-- About Section -->
+    <section class="about">
+      <h2>About KubeLife</h2>
+      <p>KubeLife is a powerful automation tool that provides advanced Kubernetes orchestration using Docker. Designed for modern infrastructure needs, KubeLife helps you achieve maximum efficiency in deploying applications, managing clusters, and ensuring smooth operations.</p>
+      <p>We focus on delivering high-quality solutions for container management, automation, and monitoring. Our platform integrates Kubernetes with Docker and powerful CI/CD pipelines to accelerate your DevOps workflows. KubeLife makes it easy to automate tasks and scale applications seamlessly with enterprise-grade features.</p>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases">
+      <h2>Use Cases</h2>
+      <div class="use-cases-container">
+        <div class="use-case">
+          <h3>Cloud-Native Application Deployment</h3>
+          <p>Deploy applications in the cloud with ease, using Kubernetes clusters managed by KubeLife. Our tool helps you automate the setup and scaling of applications across multiple cloud environments.</p>
+        </div>
+        <div class="use-case">
+          <h3>Automated CI/CD Pipelines</h3>
+          <p>Integrate Docker and Kubernetes into your CI/CD pipelines to automate your software delivery process. Deploy, test, and release software faster and more reliably.</p>
+        </div>
+        <div class="use-case">
+          <h3>Microservices Architecture</h3>
+          <p>KubeLife enables you to design, deploy, and scale microservices architectures with ease. Benefit from Kubernetes features such as automated scaling, self-healing, and load balancing.</p>
+        </div>
+        <div class="use-case">
+          <h3>Real-Time Monitoring & Alerts</h3>
+          <p>Monitor your cloud infrastructure in real-time with AWS monitoring integrated directly into KubeLife. Get alerted on performance issues and optimize resource usage across multiple clouds.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section class="documentation">
       <h2>Documentation</h2>
-      <p>For a detailed guide and advanced configurations, visit our <a href="docs.html">Documentation Page</a>.</p>
-    </div>
-  </section>
+      <p>Welcome to the official documentation for KubeLife. Here you'll find everything you need to get started and make the most of the tool.</p>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
+      <h3>Installation Guide</h3>
+      <p>Follow the steps below to install KubeLife on your local machine or cloud infrastructure.</p>
+      <ul>
+        <li>Step 1: Clone the repository</li>
+        <li>Step 2: Build the Docker image</li>
+        <li>Step 3: Configure your Docker Compose file</li>
+        <li>Step 4: Run KubeLife and access the UI via localhost</li>
+      </ul>
+
+      <h3>Configuration Guide</h3>
+      <p>Learn how to configure KubeLife for your environment, including setting up your Kubernetes clusters, AWS integration, and CI/CD pipelines.</p>
+
+      <h3>FAQ</h3>
+      <p>Here are some frequently asked questions regarding KubeLife:</p>
+      <ul>
+        <li>What is KubeLife?</li>
+        <li>How do I deploy my first application?</li>
+        <li>Can KubeLife run on multi-cloud environments?</li>
+        <li>How do I integrate KubeLife with GitLab CI/CD?</li>
+      </ul>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+      <h2>Pricing</h2>
+      <p>KubeLife offers several pricing options to suit different needs and scales.</p>
+      <div class="pricing-container">
+        <div class="pricing-plan">
+          <h3>Basic Plan</h3>
+          <p>Perfect for small-scale applications and individual developers.</p>
+          <p>$19/month</p>
+        </div>
+        <div class="pricing-plan">
+          <h3>Enterprise Plan</h3>
+          <p>For large-scale applications with enterprise-level support and features.</p>
+          <p>$199/month</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
       <h2>Contact Us</h2>
-      <p>If you need assistance or have any questions, reach out to us at <strong>support@kublife.com</strong>.</p>
-    </div>
-  </section>
+      <p>For support or inquiries, feel free to reach out to us through any of the methods below.</p>
+      <ul>
+        <li>Email: support@kubelife.com</li>
+        <li>Phone: +1 (800) 123-4567</li>
+        <li>Location: 123 Cloud Street, TechCity, USA</li>
+      </ul>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 KubeLife. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <script src="scripts.js"></script>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <p>&copy; 2024 KubeLife. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
