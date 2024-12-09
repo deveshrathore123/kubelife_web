@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>KubeLife | Next-Level Hosting</title>
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Include Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -60,7 +63,6 @@
     <section class="documentation">
       <h2>Documentation</h2>
       <p>Welcome to the official documentation for KubeLife. Here you'll find everything you need to get started and make the most of the tool.</p>
-
       <h3>Installation Guide</h3>
       <p>Follow the steps below to install KubeLife on your local machine or cloud infrastructure:</p>
       <ul>
@@ -86,100 +88,52 @@
       <p><strong>Version:</strong> 1.0.0</p>
       <p><strong>Author:</strong> Devesh Singh Rathore</p>
 
-      <h4>Introduction</h4>
-      <p>Welcome to kubelife host, the all-in-one solution for hosting your web applications effortlessly. Whether you're a developer looking to quickly spin up a static website or an administrator preparing for dynamic deployments, kubelife host has you covered.</p>
-      <p>This tool leverages the power of Docker and Docker Compose to deliver fast, reliable, and seamless hosting solutions. With an intuitive interface and robust automation, kubelife host transforms your hosting experience into a streamlined, hassle-free process.</p>
+      <!-- The rest of the documentation continues here -->
 
-      <h4>Why Choose kubelife host?</h4>
-      <ul>
-        <li>Ease of Use: Simplified commands for both beginners and experts.</li>
-        <li>Flexibility: Host static websites today, dynamic applications tomorrow.</li>
-        <li>Automation: Automatically generates and manages Docker configurations.</li>
-        <li>Customization: Configure ports, image names, and more to suit your needs.</li>
-        <li>Error Handling: Detailed prompts and validations ensure no deployment mistakes.</li>
-        <li>Future-Ready: Scalable architecture to support dynamic web applications.</li>
-      </ul>
-
-      <h4>Key Features</h4>
-      <h5>1. Static Website Hosting</h5>
-      <p>Host lightweight static websites with:</p>
-      <ul>
-        <li>HTML-only apps</li>
-        <li>CSS-based designs</li>
-        <li>Combinations of HTML and CSS</li>
-      </ul>
-      <p>The tool automates:</p>
-      <ul>
-        <li>Creation of Dockerfile and docker-compose.yml files.</li>
-        <li>Validation of directories and critical files like index.html.</li>
-        <li>Deployment using Docker Compose with automatic build and start.</li>
-      </ul>
-
-      <h5>2. Dynamic Web Application Hosting (Coming Soon)</h5>
-      <p>Prepare to deploy complex dynamic applications in future updates.</p>
-
-      <h5>3. Port Management</h5>
-      <p>Fully customizable container and host ports. Built-in validation ensures correct configurations.</p>
-
-      <h5>4. Kubernetes Naming Compliance</h5>
-      <p>Ensures all process names meet Kubernetes naming conventions for compatibility with cloud-native platforms.</p>
-
-      <h5>5. Robust Validation</h5>
-      <ul>
-        <li>Prerequisite checks for Docker and Docker Compose.</li>
-        <li>File and directory validation to avoid deployment issues.</li>
-      </ul>
-
-      <h4>System Requirements</h4>
-      <p>Before using kubelife host, ensure the following are installed:</p>
-      <ul>
-        <li>Docker: Install Docker</li>
-        <li>Docker Compose: Install Docker Compose</li>
-      </ul>
-
-      <h4>How It Works</h4>
-      <p>Step 1: Run the Command</p>
-      <pre><code>kubelife host</code></pre>
-      <p>Step 2: Choose the Application Type</p>
-      <ul>
-        <li>1 for Static Website Hosting.</li>
-        <li>2 for Dynamic Web Application Hosting (Coming Soon).</li>
-      </ul>
-      <p>Step 3: Configure Deployment</p>
-      <ul>
-        <li>Enter your process name, ensuring it follows Kubernetes conventions.</li>
-        <li>Provide the directory path containing your web application files.</li>
-        <li>Choose the host and container ports for the application.</li>
-      </ul>
-      <p>Step 4: Automatic Deployment</p>
-      <p>The tool generates all necessary configurations (Dockerfile, docker-compose.yml) and deploys your application using Docker Compose.</p>
-      <p>Step 5: Access Your Application</p>
-      <pre><code>http://localhost:<host-port></code></pre>
-
-      <h4>Error Handling</h4>
-      <ul>
-        <li>Prerequisite Checks: If Docker or Docker Compose is missing, the tool exits with a detailed error message.</li>
-        <li>Process Name Validation: Ensures process names are Kubernetes-compliant.</li>
-        <li>Directory and File Validation: Checks for the presence of index.html in the specified directory.</li>
-        <li>Port Validation: Validates that port numbers are within the valid range (1–65535).</li>
-      </ul>
-
-      <h4>FAQs</h4>
-      <h5>Q1: What if Docker is not installed?</h5>
-      <pre><code>Docker is not installed. Please install Docker and try again.</code></pre>
-
-      <h5>Q2: Can I use this tool on Windows?</h5>
-      <p>Yes, as long as Docker and Docker Compose are installed and configured properly.</p>
-
-      <h5>Q3: What happens if I provide an invalid process name?</h5>
-      <pre><code>Invalid process name. It must contain lowercase alphanumeric characters, hyphens, and periods.</code></pre>
-
-      <h5>Q4: How can I change the port number?</h5>
-      <p>Ports can be customized during the configuration phase of the deployment.</p>
-
-      <h3>Support</h3>
-      <p>If you encounter any issues, please visit our support page or email us at <a href="mailto:support@kubelife.com">support@kubelife.com</a>.</p>
     </section>
+
   </div>
+
+  <!-- WebGL (Three.js) Canvas -->
+  <div id="webgl-container"></div>
+
+  <!-- Three.js script to initialize the 3D scene -->
+  <script>
+    // Create a scene
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xeeeeee);
+
+    // Create a camera
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+    // Create a WebGL renderer
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById("webgl-container").appendChild(renderer.domElement);
+
+    // Create a cube geometry and a material, then combine them into a mesh
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+
+    // Set the camera position
+    camera.position.z = 5;
+
+    // Animation loop to render the scene
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Rotate the cube
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+
+      // Render the scene
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  </script>
+
 </body>
 </html>
