@@ -1,204 +1,115 @@
-/* Reset some default browser styling */
+/* Reset some default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
+/* General Layout */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #121212;
-  color: #fff;
   line-height: 1.6;
-  padding: 0;
-  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* Container Styling */
 .container {
-  width: 100%;
-  padding: 2rem;
-}
-
-/* Hero Section Styling */
-.hero {
-  background-color: #1f1f1f;
-  padding: 3rem;
-  text-align: center;
-  border-radius: 10px;
-  margin-bottom: 3rem;
-}
-
-.hero-content {
-  max-width: 800px;
+  width: 80%;
   margin: 0 auto;
 }
 
-.hero .logo {
-  width: 150px;
-  margin-bottom: 1rem;
+/* Hero Section */
+.hero {
+  background: #333;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin: 20px 0;
 }
 
 .hero p {
   font-size: 1.2rem;
 }
 
-/* Features Section Styling */
+.hero img {
+  width: 120px;
+  height: auto;
+}
+
+/* Features Section */
 .features {
-  text-align: center;
-  margin-bottom: 3rem;
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .features h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .features-container {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .feature {
-  background-color: #333;
-  padding: 1.5rem;
-  width: 250px;
-  border-radius: 8px;
-  margin-bottom: 2rem;
+  width: 30%;
+  margin: 10px;
+  text-align: center;
 }
 
 .feature h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
 }
 
 .feature p {
-  font-size: 1.1rem;
+  color: #7f8c8d;
 }
 
-/* Use Cases Section Styling */
-.use-cases {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.use-cases h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.use-cases-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.use-case {
-  background-color: #333;
-  padding: 1.5rem;
-  width: 250px;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
-
-.use-case h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.use-case p {
-  font-size: 1.1rem;
-}
-
-/* Documentation Section Styling */
+/* Documentation Section */
 .documentation {
-  margin-bottom: 3rem;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 40px;
 }
 
 .documentation h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .documentation h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-top: 20px;
 }
 
 .documentation ul {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  margin-top: 10px;
+  list-style-type: none;
 }
 
-.documentation li {
-  margin-bottom: 0.5rem;
+.documentation ul li {
+  padding: 5px 0;
 }
 
-/* Pricing Section Styling */
-.pricing {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.pricing h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.pricing-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.pricing-plan {
+.documentation pre {
   background-color: #333;
-  padding: 2rem;
-  width: 300px;
-  border-radius: 8px;
-  margin-bottom: 2rem;
+  color: white;
+  padding: 10px;
+  overflow-x: auto;
 }
 
-.pricing-plan h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.pricing-plan p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-/* Contact Section Styling */
-.contact {
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.contact ul {
-  font-size: 1.2rem;
-}
-
-.contact li {
-  margin-bottom: 0.8rem;
-}
-
-/* Footer Section Styling */
-.footer {
-  text-align: center;
-  margin-top: 3rem;
-  font-size: 1rem;
-  color: #aaa;
+.documentation a {
+  color: #3498db;
+  text-decoration: none;
 }
