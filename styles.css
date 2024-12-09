@@ -11,14 +11,14 @@ body {
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  position: relative; /* Needed for absolute positioning of the background animation */
+  overflow-y: scroll; /* Allow vertical scrolling */
   height: 100%;
-  overflow: hidden;
+  position: relative;
+  min-height: 100vh; /* Ensure the page takes at least the full height of the viewport */
 }
 
-/* Tech Background Animation */
-@keyframes techBackground {
+/* Blueprint Background Animation */
+@keyframes blueprintEffect {
   0% {
     background-position: 0% 50%;
   }
@@ -38,9 +38,19 @@ body::before {
   right: 0;
   bottom: 0;
   background: linear-gradient(45deg, #3498db, #8e44ad, #2ecc71, #f39c12);
-  background-size: 400% 400%;
-  animation: techBackground 5s ease infinite;
-  z-index: -1; /* Place behind all content */
+  background-size: 200% 200%;
+  animation: blueprintEffect 4s ease-in-out infinite;
+  z-index: -1; /* Place the background behind all content */
+}
+
+/* WebGL Container */
+#webgl-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 /* Container */
@@ -49,11 +59,12 @@ body::before {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  z-index: 10;
 }
 
 /* Hero Section */
 .hero {
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -126,78 +137,24 @@ body::before {
   margin-bottom: 10px;
 }
 
-.about p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
 /* Documentation Section */
 .documentation {
   background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
   margin-top: 40px;
+  border-radius: 10px;
 }
 
 .documentation h2 {
   font-size: 2rem;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.documentation h3 {
-  font-size: 1.5rem;
-  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .documentation ul {
-  margin-top: 10px;
-  list-style-type: none;
+  list-style: none;
+  padding-left: 20px;
 }
 
-.documentation ul li {
-  padding: 5px 0;
-}
-
-.documentation pre {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  overflow-x: auto;
-  font-size: 0.9rem;
-}
-
-.documentation a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .features-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feature {
-    width: 80%;
-    margin: 10px 0;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto; /* Allow vertical scrolling */
-  position: relative; /* Needed for absolute positioning of the background animation */
-  min-height: 100vh; /* Ensure the page takes at least the full height of the viewport */
+.documentation li {
+  margin: 5px 0;
 }
