@@ -17,14 +17,39 @@ body {
 
 /* Background Video */
 #background-video {
-  position: fixed; /* Keep the video fixed to the background */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the video covers the full screen */
-  z-index: -1; /* Puts the video behind other content */
-  opacity: 0.3; /* Optional: Makes the video less intrusive */
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Header */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff6347;
 }
 
 /* Hero Section */
@@ -49,24 +74,47 @@ body {
   margin-bottom: 30px;
 }
 
-.logo-size {
-  max-width: 100px; /* Resize logo */
-  height: auto;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
+.highlight {
+  color: #ff6347;
 }
 
-.logo-size:hover {
-  transform: scale(1.1);
+/* Tools Section */
+.tools-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.tools-card {
+  text-align: center;
+  width: 200px;
+  margin-bottom: 30px;
 }
 
 .tools-card img {
-  max-width: 100px; /* Keep tool logos consistent */
+  max-width: 100px;
   height: auto;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.tools-card img:hover {
+  transform: scale(1.1);
+}
+
+.tools-card h4 {
+  font-size: 1.3rem;
   margin-bottom: 10px;
 }
 
-/* Footer Styles */
+.tools-card p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Footer Section */
 footer {
   background-color: #121212;
   color: white;
@@ -85,35 +133,6 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* Tools Section */
-.tools-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px; /* Increased gap between the cards for more spacing */
-  margin-top: 20px;
-}
-
-.tools-card {
-  text-align: center;
-  width: 150px;
-  margin-bottom: 30px;
-}
-
-.tools-card img {
-  max-width: 100px; /* Keep tool logos consistent */
-  height: auto;
-  margin-bottom: 20px; /* Increased bottom margin to add more space */
-  margin-left: 20px;  /* Optional: Add left margin to further separate images */
-  margin-right: 20px; /* Optional: Add right margin for spacing */
-}
-
- .tools-cards{
-     justify-content: space-between !important;
-
- }
-
-
 /* AOS Animation */
 [data-aos] {
   opacity: 0;
@@ -122,13 +141,4 @@ footer {
 
 [data-aos].aos-animate {
   opacity: 1;
-}
-/* Documentation Section Animation */
-.documentation {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.documentation.show {
-    opacity: 1;
 }
