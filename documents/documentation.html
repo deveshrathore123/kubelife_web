@@ -7,87 +7,134 @@
     <title>KubeLife Documentation</title>
     <link rel="stylesheet" href="../styles.css"> <!-- Link to your existing styles -->
     <style>
-        /* Background Video Styling */
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Background Video */
         #background-video {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the video covers the full screen */
-            z-index: -1; /* Makes sure the video stays in the background */
-            opacity: 0.5; /* Dim the video to make text more visible */
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.4;
         }
 
-        /* Main Body Styling */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #fff;
-            overflow-x: hidden;
-        }
-
+        /* Header Styling */
         header {
             background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
             z-index: 100;
             position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
+            color: #ff6347;
         }
 
         /* Main Content Section */
         main {
-            margin-top: 20px;
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         h2, h3 {
-            color: #fff;
+            color: #ff6347;
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: #f0f0f0;
+            margin-top: 15px;
+            font-size: 1.6rem;
         }
 
         ul, ol {
-            color: #fff;
-            margin-left: 20px;
+            margin-left: 30px;
+            font-size: 1.1rem;
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         code {
             background-color: #222;
             color: #f1f1f1;
-            padding: 5px;
-            border-radius: 3px;
+            padding: 8px;
+            border-radius: 5px;
         }
 
         pre {
-            background-color: #222;
+            background-color: #333;
             padding: 20px;
             border-radius: 5px;
             font-size: 1.2rem;
             white-space: pre-wrap;
             word-wrap: break-word;
-            color: #fff;
+            color: #f1f1f1;
         }
 
+        /* Command Box Styling */
+        .command-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #222;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+
+        .copy-btn {
+            background-color: #ff6347;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .copy-btn:hover {
+            background-color: #ff4500;
+        }
+
+        .copy-btn:focus {
+            outline: none;
+        }
+
+        .copy-btn:active {
+            background-color: #e53e00;
+        }
+
+        /* Footer Styling */
         footer {
             background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
             padding: 15px;
             text-align: center;
+            color: #fff;
             margin-top: 30px;
         }
+
     </style>
 </head>
 
@@ -125,8 +172,18 @@
             <h3>How to Run:</h3>
             <ol>
                 <li>Clone or Download the Script.</li>
-                <li>Make the Script Executable: <code>chmod +x kubelife.sh</code></li>
-                <li>Run the Script: <code>./kubelife.sh</code></li>
+                <li>Make the Script Executable:
+                    <div class="command-box">
+                        <code>chmod +x kubelife.sh</code>
+                        <button class="copy-btn" onclick="copyToClipboard('chmod +x kubelife.sh')">Copy</button>
+                    </div>
+                </li>
+                <li>Run the Script:
+                    <div class="command-box">
+                        <code>./kubelife.sh</code>
+                        <button class="copy-btn" onclick="copyToClipboard('./kubelife.sh')">Copy</button>
+                    </div>
+                </li>
             </ol>
 
             <h3>Static Website Deployment (HTML/CSS)</h3>
@@ -162,6 +219,17 @@ Enter your choice: 1
         </footer>
     </main>
 
+    <script>
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('input');
+            document.body.appendChild(tempInput);
+            tempInput.value = text;
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Copied to clipboard: ' + text);
+        }
+    </script>
 </body>
 
 </html>
