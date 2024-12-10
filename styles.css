@@ -27,6 +27,17 @@ body {
   opacity: 0.3; /* Optional: Makes the video less intrusive */
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+a{
+  text-decoration:none;
+}
+
 /* Hero Section */
 .hero {
   background: rgba(0, 0, 0, 0.7);
