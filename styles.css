@@ -41,6 +41,7 @@ body {
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #1abc9c; /* Set hero section heading color */
 }
 
 .hero-description {
@@ -49,6 +50,7 @@ body {
   margin-bottom: 30px;
 }
 
+/* Logo size adjustments */
 .logo-size {
   max-width: 100px; /* Resize logo */
   height: auto;
@@ -58,31 +60,6 @@ body {
 
 .logo-size:hover {
   transform: scale(1.1);
-}
-
-.tools-card img {
-  max-width: 100px; /* Keep tool logos consistent */
-  height: auto;
-  margin-bottom: 10px;
-}
-
-/* Footer Styles */
-footer {
-  background-color: #121212;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-.footer-logo-container {
-  margin-bottom: 10px;
-}
-
-.footer-logo {
-  max-width: 80px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* Tools Section */
@@ -108,11 +85,33 @@ footer {
   margin-right: 20px; /* Optional: Add right margin for spacing */
 }
 
- .tools-cards{
-     justify-content: space-between !important;
+.tools-cards {
+  justify-content: space-between !important;
+}
 
- }
+/* Footer Styles */
+footer {
+  background-color: #121212;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
 
+.footer-logo-container {
+  margin-bottom: 10px;
+}
+
+.footer-logo {
+  max-width: 80px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+footer h1,
+footer p {
+  color: #1abc9c; /* Set footer text color to match the theme */
+}
 
 /* AOS Animation */
 [data-aos] {
@@ -123,12 +122,27 @@ footer {
 [data-aos].aos-animate {
   opacity: 1;
 }
+
 /* Documentation Section Animation */
 .documentation {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .documentation.show {
-    opacity: 1;
+  opacity: 1;
+}
+
+/* Additional Section Titles */
+h2, h3 {
+  color: #1abc9c; /* Set color for documentation section headings */
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: Add text shadow */
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-top: 20px;
 }
