@@ -12,109 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Hero Section Styling */
-        .hero-title {
-            color: #fff;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-            font-size: 4rem;
-            letter-spacing: 5px;
-            font-weight: bold;
-            animation: fadeInTitle 2s ease-out;
-        }
-
-        .hero-description {
-            font-size: 1.7rem;
-            color: #d1d1d1;
-            font-weight: 300;
-            margin-top: 20px;
-            animation: fadeIn 3s ease-in-out;
-        }
-
-        .highlight {
-            color: #00bcd4;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Fade-in effect */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        /* Animation for title text */
-        @keyframes fadeInTitle {
-            0% { opacity: 0; transform: translateY(-50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Button Hover Effect */
-        .btn-primary {
-            background-color: #0056b3;
-            border: none;
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .btn-primary:hover {
-            background-color: #00408a;
-            transform: translateY(-5px);
-        }
-
-        /* Tools Section Styling */
-        .tools-section {
-            background-color: #f8f9fa;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .tools-section h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 30px;
-            font-weight: bold;
-        }
-
-        .tools-cards {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .tools-card {
-            width: 200px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .tools-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .tools-card img {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 20px;
-        }
-
-        .tools-card h4 {
-            font-size: 1.2rem;
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-
-        .tools-card p {
-            font-size: 1rem;
-            color: #555;
-        }
-    </style>
 </head>
 
 <body>
@@ -137,7 +34,7 @@
     <main class="container my-5">
         <!-- Hero Section -->
         <section class="hero text-center" data-aos="fade-in">
-            <img src="images/logo.png" alt="KubeLife Logo" class="img-fluid mb-4">
+            <img src="images/logo.png" alt="KubeLife Logo" class="img-fluid mb-4" style="max-width: 150px;">
             <h1 class="hero-title display-3 text-uppercase text-shadow">KubeLife</h1>
             <p class="hero-description lead text-light fs-4 mt-3 mb-4">
                 Revolutionizing <span class="highlight">Cloud Computing</span> with <span class="highlight">Kubernetes</span> and <span class="highlight">Docker</span>
@@ -145,76 +42,72 @@
             <a href="#documentation" class="btn btn-primary btn-lg mt-3 px-5 py-3 shadow-lg" style="font-size: 1.2rem;">Learn More</a>
         </section>
 
-        <!-- Integrated Tools Section -->
+        <!-- Tools Section -->
         <section class="tools-section" id="integrated-tools">
-            <h2>Integrated Tools</h2>
-            <div class="tools-cards">
-                <!-- CI/CD -->
+            <h2 class="text-center">Integrated Tools</h2>
+            <div class="tools-cards d-flex justify-content-center flex-wrap gap-3">
+                <!-- Tool Cards -->
                 <div class="tools-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Jenkins_logo.png" alt="CI/CD">
+                    <img src="images/CiCd.png" alt="CI/CD" class="img-fluid mb-3" style="max-height: 80px;">
                     <h4>CI/CD</h4>
-                    <p>Seamless integration with Jenkins and GitLab for continuous integration and delivery.</p>
+                    <p>Seamless integration for continuous integration and delivery.</p>
                 </div>
-                <!-- Docker -->
                 <div class="tools-card">
-                    <img src="https://www.docker.com/wp-content/uploads/2022/03/horizontal-logo-monochromatic-white.svg" alt="Docker">
+                    <img src="images/docker.png" alt="Docker" class="img-fluid mb-3" style="max-height: 80px;">
                     <h4>Docker</h4>
-                    <p>Containerization with Docker to simplify application deployment and scaling.</p>
+                    <p>Streamline application deployment with containerization.</p>
                 </div>
-                <!-- Kubernetes -->
                 <div class="tools-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Kubernetes_logo.svg" alt="Kubernetes">
+                    <img src="images/Kubernetes.png" alt="Kubernetes" class="img-fluid mb-3" style="max-height: 80px;">
                     <h4>Kubernetes</h4>
-                    <p>Powerful orchestration with Kubernetes for managing complex containerized applications.</p>
+                    <p>Effortless orchestration for complex cloud environments.</p>
                 </div>
-                <!-- Prometheus -->
                 <div class="tools-card">
-                    <img src="https://prometheus.io/assets/logos/prometheus/prometheus-logo.svg" alt="Prometheus">
+                    <img src="images/Prometheus.png" alt="Prometheus" class="img-fluid mb-3" style="max-height: 80px;">
                     <h4>Prometheus</h4>
-                    <p>Monitoring and alerting with Prometheus for better insights into your cloud infrastructure.</p>
+                    <p>Advanced monitoring and alerting for cloud infrastructure.</p>
                 </div>
-                <!-- Grafana -->
                 <div class="tools-card">
-                    <img src="https://grafana.com/static/assets/img/favicon.ico" alt="Grafana">
+                    <img src="images/grafana.png" alt="Grafana" class="img-fluid mb-3" style="max-height: 80px;">
                     <h4>Grafana</h4>
-                    <p>Visualization and analytics with Grafana for cloud infrastructure metrics and monitoring.</p>
+                    <p>Visualize and analyze your cloud infrastructure metrics.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Founder Section -->
-        <section class="founder-section mt-5 p-5" style="background-color: #f8f9fa; color: #343a40; text-align: center; border-radius: 8px;">
-            <h2>About the Founder</h2>
-            <p><strong>Devesh Singh Rathore</strong> is the creator and visionary behind KubeLife, a tool designed to revolutionize cloud computing using Kubernetes and Docker.</p>
-            <p>KubeLife is now a part of the <strong>CNCF Landscape</strong>. Contribute to the project on <a href="https://github.com/deveshrathore123/kubelife_server.git" target="_blank">GitHub</a>.</p>
+        <!-- About Section -->
+        <section class="about-section mt-5 text-center">
+            <h2>About KubeLife</h2>
+            <img src="images/hero-image.jpg" alt="Hero Image" class="img-fluid my-4" style="border-radius: 8px; max-height: 300px;">
+            <p><strong>Devesh Singh Rathore</strong> is the creator of KubeLife, a tool designed to revolutionize cloud computing using Kubernetes and Docker.</p>
         </section>
 
         <!-- Documentation Section -->
         <section id="documentation" class="documentation mt-5">
             <h2 class="text-center">Documentation</h2>
-            <p class="lead text-center">Learn how to deploy and manage your cloud infrastructure with Kubernetes and Docker.</p>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card mb-4">
+                    <div class="card">
+                        <img src="images/logo.png" alt="KubeLife Documentation" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">KubeLife Deployment</h5>
-                            <p class="card-text">Learn how to deploy your applications easily with KubeLife, utilizing Kubernetes and Docker containers. Step-by-step guides are provided for all deployment methods.</p>
+                            <p class="card-text">Deploy and manage your applications easily with KubeLife.</p>
                             <a href="https://github.com/deveshrathore123/kubelife_server.git" class="btn btn-primary">View Documentation</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card mb-4">
+                    <div class="card">
+                        <img src="images/docker.png" alt="Docker Basics" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Docker and Kubernetes Basics</h5>
-                            <p class="card-text">A comprehensive overview of Docker and Kubernetes, perfect for beginners and advanced users. Understand the core concepts of containerization and orchestration.</p>
+                            <p class="card-text">Get started with the fundamentals of containerization and orchestration.</p>
                             <a href="https://www.docker.com/resources/what-container" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
