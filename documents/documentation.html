@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,15 +7,19 @@
     <title>KubEdge Documentation</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
-        /* General Styling */
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #121212;
             color: #fff;
-            margin: 0;
-            padding: 0;
             overflow-x: hidden;
-            height: 100%;
+            height: 100vh;
         }
 
         /* Background Video */
@@ -28,46 +31,55 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            opacity: 0.5;
+            opacity: 0.7;
         }
 
         /* Header Styling */
         header {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
             z-index: 100;
-            position: relative;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 700;
             color: #ff6347;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
 
-        /* Main Content Section */
+        /* Main Section */
         main {
-            padding: 20px;
+            padding: 40px 20px;
             max-width: 1200px;
             margin: 0 auto;
             overflow-y: auto;
-            height: 100vh;
         }
 
         h2,
         h3 {
             color: #ff6347;
             text-align: center;
-            margin-top: 30px;
-            font-size: 1.8rem;
+            margin-top: 40px;
+            font-size: 2rem;
         }
 
         h3 {
-            color: #f0f0f0;
-            margin-top: 15px;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-top: 20px;
         }
 
         ul,
@@ -80,20 +92,41 @@
             margin-bottom: 15px;
         }
 
-        code {
+        pre {
             background-color: #222;
-            color: #f1f1f1;
-            padding: 8px;
+            padding: 15px;
             border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: #f1f1f1;
+            margin-top: 20px;
         }
 
-        /* Footer */
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            background-color: #ff6347;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e0533d;
+        }
+
+        /* Footer Styling */
         footer {
             background-color: #121212;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             color: #fff;
-            margin-top: 50px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
 
         footer a {
@@ -110,68 +143,72 @@
 <body>
     <!-- Background Video -->
     <video autoplay loop muted id="background-video">
-        <source src="../kubedge_background.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        <source src="kubelife_background.mp4" type="video/mp4">
+        <source src="kubelife_background.webm" type="video/webm">
+        <p>Your browser does not support the video tag. Please update your browser or use a different one.</p>
     </video>
 
     <!-- Header -->
     <header>
         <h1>KubEdge Documentation</h1>
+        <p>Everything you need to know about deploying, managing, and scaling cloud-native applications with KubEdge</p>
     </header>
 
     <!-- Main Content -->
     <main>
         <section>
             <h2>Introduction to KubEdge</h2>
-            <p>Welcome to the official KubEdge documentation. KubEdge is an innovative cloud computing platform built with Kubernetes and Docker to automate cloud deployments, scalability, and management. It streamlines workflows and integrates monitoring tools like Prometheus and Grafana.</p>
+            <p>Welcome to the official KubEdge documentation! KubEdge is a next-generation cloud-native platform designed to help you manage, deploy, and scale containerized applications with ease. Built on top of Kubernetes and Docker, KubEdge integrates seamlessly with Prometheus and Grafana for monitoring and analytics.</p>
         </section>
 
         <section>
             <h3>Installation and Setup</h3>
-            <p>To get started with KubEdge, follow these steps:</p>
+            <p>Follow these simple steps to install KubEdge on your system:</p>
             <ol>
-                <li>Install Docker on your local system.</li>
-                <li>Install Kubernetes using a tool like Minikube.</li>
-                <li>Clone the KubEdge repository:</li>
+                <li>Ensure Docker is installed on your machine.</li>
+                <li>Install Kubernetes using Minikube or any preferred method.</li>
+                <li>Clone the KubEdge repository from GitHub:</li>
                 <pre><code>git clone https://github.com/deveshrathore123/kubedge_server.git</code></pre>
-                <li>Run the deployment scripts to set up your KubEdge environment.</li>
+                <li>Run the deployment scripts and follow the setup guide in the repository.</li>
             </ol>
+            <a href="https://github.com/deveshrathore123/kubedge_server.git" class="btn" target="_blank">Get KubEdge</a>
         </section>
 
         <section>
-            <h3>How to Use KubEdge</h3>
-            <p>KubEdge helps automate your cloud workflows by:</p>
+            <h3>How KubEdge Works</h3>
+            <p>KubEdge uses Kubernetes to orchestrate your containerized applications and Docker for building and deploying them. Here’s how it simplifies your workflow:</p>
             <ul>
-                <li>Using Docker for containerized applications.</li>
-                <li>Utilizing Kubernetes for orchestrating and scaling microservices.</li>
-                <li>Integrating with Prometheus and Grafana for monitoring and analytics.</li>
+                <li>Automates deployments using Kubernetes.</li>
+                <li>Scales applications based on load.</li>
+                <li>Integrates with Prometheus for real-time monitoring and Grafana for data visualization.</li>
+                <li>Provides robust logging, alerting, and monitoring features.</li>
             </ul>
         </section>
 
         <section>
             <h3>Additional Resources</h3>
-            <p>For more detailed documentation, you can explore the following links:</p>
+            <p>Learn more about KubEdge and related technologies:</p>
             <ul>
-                <li><a href="https://kubernetes.io/docs/" target="_blank" style="color: #ff6347;">Kubernetes Documentation</a></li>
-                <li><a href="https://www.docker.com/resources/what-container" target="_blank" style="color: #ff6347;">Docker Overview</a></li>
-                <li><a href="https://prometheus.io/docs/" target="_blank" style="color: #ff6347;">Prometheus Documentation</a></li>
-                <li><a href="https://grafana.com/docs/" target="_blank" style="color: #ff6347;">Grafana Documentation</a></li>
+                <li><a href="https://kubernetes.io/docs/" target="_blank">Kubernetes Documentation</a></li>
+                <li><a href="https://www.docker.com/resources/what-container" target="_blank">Docker Overview</a></li>
+                <li><a href="https://prometheus.io/docs/" target="_blank">Prometheus Documentation</a></li>
+                <li><a href="https://grafana.com/docs/" target="_blank">Grafana Documentation</a></li>
             </ul>
         </section>
 
         <section>
             <h3>FAQs</h3>
             <ul>
-                <li><strong>What is KubEdge?</strong> KubEdge is a cloud computing platform built with Kubernetes and Docker that streamlines deployment, orchestration, and management of applications at scale.</li>
-                <li><strong>How do I install KubEdge?</strong> You can follow the installation steps mentioned in the 'Installation and Setup' section of this documentation.</li>
-                <li><strong>What is the role of Prometheus and Grafana in KubEdge?</strong> These tools provide real-time monitoring and visualization of application performance and cloud infrastructure metrics.</li>
+                <li><strong>What is KubEdge?</strong> A cloud-native platform built with Kubernetes and Docker to simplify deployment and management of containerized applications.</li>
+                <li><strong>How do I install KubEdge?</strong> Follow the step-by-step guide in the 'Installation and Setup' section.</li>
+                <li><strong>Why use Prometheus and Grafana?</strong> These tools provide powerful monitoring and visualization for cloud infrastructure and application performance.</li>
             </ul>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 KubEdge | All Rights Reserved | Created by <a href="mailto:deveshrathore13@gmail.com">Devesh Singh Rathore</a></p>
+        <p>© 2024 KubEdge | Created by <a href="mailto:deveshrathore13@gmail.com">Devesh Singh Rathore</a></p>
     </footer>
 
 </body>
