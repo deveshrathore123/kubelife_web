@@ -67,5 +67,10 @@ document.addEventListener('load', function() {
     // Hide loading spinner when everything is loaded
     document.getElementById("loading-spinner").style.display = 'none';
 });
+document.getElementById('learn-more-btn').addEventListener('click', function() {
+    var documentationSection = document.getElementById('documentation-section');
+    documentationSection.classList.add('show'); // Add fade-in class
+    this.style.display = 'none'; // Hide the button
+});
 
 // Example: Add a loading spinner in the HTML (in your index.html) that shows until everything is loaded.
