@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KubeLife Documentation</title>
-    <link rel="stylesheet" href="../styles.css"> <!-- Link to your existing styles -->
+    <title>KubEdge Documentation</title>
+    <link rel="stylesheet" href="../styles.css">
     <style>
         /* General Styling */
         body {
@@ -81,155 +81,72 @@
             border-radius: 5px;
         }
 
-        pre {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            color: #f1f1f1;
-        }
-
-        /* Command Box Styling */
-        .command-box {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #222;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            font-size: 1.1rem;
-        }
-
-        .copy-btn {
-            background-color: #ff6347;
-            color: white;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .copy-btn:hover {
-            background-color: #ff4500;
-        }
-
-        .copy-btn:focus {
-            outline: none;
-        }
-
-        .copy-btn:active {
-            background-color: #e53e00;
-        }
-
-        /* Footer Styling */
+        /* Footer */
         footer {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px;
+            background-color: #121212;
             text-align: center;
+            padding: 10px;
             color: #fff;
-            margin-top: 30px;
+            margin-top: 50px;
         }
 
+        footer a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
-
     <!-- Background Video -->
     <video autoplay loop muted id="background-video">
-        <source src="../kubelife_background.mp4" type="video/mp4">
+        <source src="../kubedge_background.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
+    <!-- Header -->
     <header>
-        <h1>KubeLife Documentation</h1>
+        <h1>KubEdge Documentation</h1>
     </header>
 
-    <main class="container">
-        <!-- Key Features Section -->
+    <!-- Main Content -->
+    <main>
         <section>
-            <h2>Key Features:</h2>
-            <ul>
-                <li>Docker & Docker Compose Validation: Ensures Docker and Docker Compose are installed before proceeding.</li>
-                <li>Static Website Hosting: Deploys HTML/CSS websites with Nginx using Docker.</li>
-                <li>Dockerfile & Docker Compose Setup: Automatically generates Dockerfile and docker-compose.yml for hosting the website.</li>
-                <li>Port Configuration: User-defined ports for container access and external access.</li>
-                <li>Future Dynamic Hosting Support: Placeholder for dynamic web app deployment (under development).</li>
-            </ul>
-
-            <h2>Installation & Setup:</h2>
-            <p>Before running the script, ensure that you have the following installed:</p>
-            <ul>
-                <li>Docker: To create and run containers.</li>
-                <li>Docker Compose: To manage multi-container Docker applications.</li>
-            </ul>
-
-            <h3>How to Run:</h3>
-            <ol>
-                <li>Clone or Download the Script.</li>
-                <li>Make the Script Executable:
-                    <div class="command-box">
-                        <code>chmod +x kubelife.sh</code>
-                        <button class="copy-btn" onclick="copyToClipboard('chmod +x kubelife.sh')">Copy</button>
-                    </div>
-                </li>
-                <li>Run the Script:
-                    <div class="command-box">
-                        <code>./kubelife.sh</code>
-                        <button class="copy-btn" onclick="copyToClipboard('./kubelife.sh')">Copy</button>
-                    </div>
-                </li>
-            </ol>
-
-            <h3>Static Website Deployment (HTML/CSS)</h3>
-            <p>Choose "1" for static websites when prompted.</p>
-            <p>Provide the web app information: type (HTML, CSS), directory path, image name, etc.</p>
-
-            <h3>Example Walkthrough:</h3>
-            <pre>
-./kubelife.sh
-Select the application type:
-1. Static Website
-2. Dynamic Web Application
-Enter your choice: 1
-            </pre>
-
-            <h2>Troubleshooting:</h2>
-            <ul>
-                <li>Docker Not Installed: Instructions will be provided.</li>
-                <li>Invalid Ports: You will be prompted to enter valid ports.</li>
-                <li>Missing index.html: The script will exit with an error.</li>
-            </ul>
-
-            <h2>Future Improvements:</h2>
-            <ul>
-                <li>Dynamic Web App Deployment</li>
-                <li>SSL/TLS Support</li>
-                <li>Kubernetes Integration</li>
-            </ul>
+            <h2>Introduction to KubEdge</h2>
+            <p>Welcome to the official KubEdge documentation. KubEdge is an innovative cloud computing platform built with Kubernetes and Docker to automate cloud deployments, scalability, and management. It streamlines workflows and integrates monitoring tools like Prometheus and Grafana.</p>
         </section>
 
-        <footer>
-            <p>&copy; 2024 KubeLife. All rights reserved.</p>
-        </footer>
+        <section>
+            <h3>Installation and Setup</h3>
+            <p>To get started with KubEdge, follow these steps:</p>
+            <ol>
+                <li>Install Docker on your local system.</li>
+                <li>Install Kubernetes using a tool like Minikube.</li>
+                <li>Clone the KubEdge repository:</li>
+                <pre><code>git clone https://github.com/deveshrathore123/kubedge_server.git</code></pre>
+                <li>Run the deployment scripts to set up your KubEdge environment.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>How to Use KubEdge</h3>
+            <p>KubEdge helps automate your cloud workflows by:</p>
+            <ul>
+                <li>Using Docker for containerized applications.</li>
+                <li>Utilizing Kubernetes for orchestrating and scaling microservices.</li>
+                <li>Integrating with Prometheus and Grafana for monitoring and analytics.</li>
+            </ul>
+        </section>
     </main>
 
-    <script>
-        function copyToClipboard(text) {
-            const tempInput = document.createElement('input');
-            document.body.appendChild(tempInput);
-            tempInput.value = text;
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-            alert('Copied to clipboard: ' + text);
-        }
-    </script>
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 KubEdge | All Rights Reserved | Created by <a href="mailto:deveshrathore13@gmail.com">Devesh Singh Rathore</a></p>
+    </footer>
 </body>
 
 </html>
