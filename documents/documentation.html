@@ -10,66 +10,76 @@
 
 <body>
 
-    <header>
-        <h1>KubeLife Documentation</h1>
+    <!-- Background Video -->
+    <video autoplay loop muted id="background-video">
+        <source src="../kubelife_background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <h1>KubeLife Documentation</h1>
+        </div>
     </header>
 
-    <section>
-        <h2>Key Features:</h2>
-        <ul>
-            <li>Docker & Docker Compose Validation: Ensures Docker and Docker Compose are installed before proceeding.</li>
-            <li>Static Website Hosting: Deploys HTML/CSS websites with Nginx using Docker.</li>
-            <li>Dockerfile & Docker Compose Setup: Automatically generates Dockerfile and docker-compose.yml for hosting the website.</li>
-            <li>Port Configuration: User-defined ports for container access and external access.</li>
-            <li>Future Dynamic Hosting Support: Placeholder for dynamic web app deployment (under development).</li>
-        </ul>
+    <main class="container my-5">
+        <!-- Key Features Section -->
+        <section>
+            <h2 class="text-light">Key Features:</h2>
+            <ul class="text-light">
+                <li>Docker & Docker Compose Validation: Ensures Docker and Docker Compose are installed before proceeding.</li>
+                <li>Static Website Hosting: Deploys HTML/CSS websites with Nginx using Docker.</li>
+                <li>Dockerfile & Docker Compose Setup: Automatically generates Dockerfile and docker-compose.yml for hosting the website.</li>
+                <li>Port Configuration: User-defined ports for container access and external access.</li>
+                <li>Future Dynamic Hosting Support: Placeholder for dynamic web app deployment (under development).</li>
+            </ul>
 
-        <h2>Installation & Setup:</h2>
-        <p>Before running the script, ensure that you have the following installed:</p>
-        <ul>
-            <li>Docker: To create and run containers.</li>
-            <li>Docker Compose: To manage multi-container Docker applications.</li>
-        </ul>
+            <h2 class="text-light">Installation & Setup:</h2>
+            <p class="text-light">Before running the script, ensure that you have the following installed:</p>
+            <ul class="text-light">
+                <li>Docker: To create and run containers.</li>
+                <li>Docker Compose: To manage multi-container Docker applications.</li>
+            </ul>
 
-        <h3>How to Run:</h3>
-        <ol>
-            <li>Clone or Download the Script.</li>
-            <li>Make the Script Executable: <code>chmod +x kubelife.sh</code></li>
-            <li>Run the Script: <code>./kubelife.sh</code></li>
-        </ol>
+            <h3 class="text-light">How to Run:</h3>
+            <ol class="text-light">
+                <li>Clone or Download the Script.</li>
+                <li>Make the Script Executable: <code>chmod +x kubelife.sh</code></li>
+                <li>Run the Script: <code>./kubelife.sh</code></li>
+            </ol>
 
-        <h3>Static Website Deployment (HTML/CSS)</h3>
-        <p>Choose "1" for static websites when prompted.</p>
-        <p>Provide the web app information: type (HTML, CSS), directory path, image name, etc.</p>
+            <h3 class="text-light">Static Website Deployment (HTML/CSS)</h3>
+            <p class="text-light">Choose "1" for static websites when prompted.</p>
+            <p class="text-light">Provide the web app information: type (HTML, CSS), directory path, image name, etc.</p>
 
-        <h3>Example Walkthrough:</h3>
-        <pre>
+            <h3 class="text-light">Example Walkthrough:</h3>
+            <pre class="text-light">
 ./kubelife.sh
 Select the application type:
 1. Static Website
 2. Dynamic Web Application
 Enter your choice: 1
-        </pre>
+            </pre>
 
-        <h2>Troubleshooting:</h2>
-        <ul>
-            <li>Docker Not Installed: Instructions will be provided.</li>
-            <li>Invalid Ports: You will be prompted to enter valid ports.</li>
-            <li>Missing index.html: The script will exit with an error.</li>
-        </ul>
+            <h2 class="text-light">Troubleshooting:</h2>
+            <ul class="text-light">
+                <li>Docker Not Installed: Instructions will be provided.</li>
+                <li>Invalid Ports: You will be prompted to enter valid ports.</li>
+                <li>Missing index.html: The script will exit with an error.</li>
+            </ul>
 
-        <h2>Future Improvements:</h2>
-        <ul>
-            <li>Dynamic Web App Deployment</li>
-            <li>SSL/TLS Support</li>
-            <li>Kubernetes Integration</li>
-        </ul>
+            <h2 class="text-light">Future Improvements:</h2>
+            <ul class="text-light">
+                <li>Dynamic Web App Deployment</li>
+                <li>SSL/TLS Support</li>
+                <li>Kubernetes Integration</li>
+            </ul>
+        </section>
 
-        <footer>
+        <footer class="bg-dark text-white text-center py-3">
             <p>&copy; 2024 KubeLife. All rights reserved.</p>
         </footer>
-
-    </section>
+    </main>
 
 </body>
 
