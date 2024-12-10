@@ -39,12 +39,52 @@
             <p class="hero-description lead text-light fs-4 mt-3 mb-4">
                 Revolutionizing <span class="highlight">Cloud Computing</span> with <span class="highlight">Kubernetes</span> and <span class="highlight">Docker</span>
             </p>
-            <a href="#" class="btn btn-primary btn-lg mt-3 px-5 py-3 shadow-lg" id="learn-more-btn" style="font-size: 1.2rem;">Learn More</a>
+            <a href="#documentation" class="btn btn-primary btn-lg mt-3 px-5 py-3 shadow-lg" style="font-size: 1.2rem;">Learn More</a>
         </section>
 
-        <!-- Documentation Section (Hidden by default) -->
-        <section id="documentation-section" class="documentation mt-5" style="display: none;">
-            <h2 class="text-center">KubeLife Documentation</h2>
+        <!-- Tools Section -->
+        <section class="tools-section" id="integrated-tools">
+            <h2 class="text-center">Integrated Tools</h2>
+            <div class="tools-cards d-flex justify-content-center flex-wrap gap-3">
+                <!-- Tool Cards -->
+                <div class="tools-card">
+                    <img src="images/CiCd.png" alt="CI/CD" class="img-fluid mb-3 logo-size">
+                    <h4>CI/CD</h4>
+                    <p>Seamless integration for continuous integration and delivery.</p>
+                </div>
+                <div class="tools-card">
+                    <img src="images/docker.png" alt="Docker" class="img-fluid mb-3 logo-size">
+                    <h4>Docker</h4>
+                    <p>Streamline application deployment with containerization.</p>
+                </div>
+                <div class="tools-card">
+                    <img src="images/Kubernetes.png" alt="Kubernetes" class="img-fluid mb-3 logo-size">
+                    <h4>Kubernetes</h4>
+                    <p>Effortless orchestration for complex cloud environments.</p>
+                </div>
+                <div class="tools-card">
+                    <img src="images/Prometheus.png" alt="Prometheus" class="img-fluid mb-3 logo-size">
+                    <h4>Prometheus</h4>
+                    <p>Advanced monitoring and alerting for cloud infrastructure.</p>
+                </div>
+                <div class="tools-card">
+                    <img src="images/grafana.png" alt="Grafana" class="img-fluid mb-3 logo-size">
+                    <h4>Grafana</h4>
+                    <p>Visualize and analyze your cloud infrastructure metrics.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section mt-5 text-center">
+            <h2>About KubeLife</h2>
+            <img src="images/hero-image.jpg" alt="Hero Image" class="img-fluid my-4" style="border-radius: 8px; max-height: 300px;">
+            <p><strong>Devesh Singh Rathore</strong> is the creator of KubeLife, a tool designed to revolutionize cloud computing using Kubernetes and Docker.</p>
+        </section>
+
+        <!-- Documentation Section -->
+        <section id="documentation" class="documentation mt-5">
+            <h2 class="text-center">Documentation</h2>
             <div class="row">
                 <div class="col-md-6">
                     <div class="card">
@@ -52,7 +92,8 @@
                         <div class="card-body">
                             <h5 class="card-title">KubeLife Deployment</h5>
                             <p class="card-text">Deploy and manage your applications easily with KubeLife.</p>
-                            <a href="https://github.com/deveshrathore123/kubelife_server.git" class="btn btn-primary" target="_blank">View Documentation</a>
+                            <!-- Updated link to the new documentation file in 'documents' folder -->
+                            <a href="documents/documentation.html" class="btn btn-primary">View Documentation</a>
                         </div>
                     </div>
                 </div>
@@ -62,7 +103,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Docker and Kubernetes Basics</h5>
                             <p class="card-text">Get started with the fundamentals of containerization and orchestration.</p>
-                            <a href="https://www.docker.com/resources/what-container" class="btn btn-primary" target="_blank">Learn More</a>
+                            <a href="https://www.docker.com/resources/what-container" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -80,15 +121,6 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
-
-        // JavaScript to handle the "Learn More" button click
-        document.getElementById('learn-more-btn').addEventListener('click', function() {
-            // Show the documentation section
-            var documentationSection = document.getElementById('documentation-section');
-            documentationSection.style.display = 'block';  // Make the section visible
-            // Optionally, you can hide the button after it's clicked
-            this.style.display = 'none';
-        });
     </script>
 </body>
 
