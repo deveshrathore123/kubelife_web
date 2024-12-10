@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +16,7 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            height: 100%;
         }
 
         /* Background Video */
@@ -26,7 +28,7 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            opacity: 0.4;
+            opacity: 0.5;
         }
 
         /* Header Styling */
@@ -50,9 +52,12 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            overflow-y: auto;
+            height: 100vh;
         }
 
-        h2, h3 {
+        h2,
+        h3 {
             color: #ff6347;
             text-align: center;
             margin-top: 30px;
@@ -65,7 +70,8 @@
             font-size: 1.6rem;
         }
 
-        ul, ol {
+        ul,
+        ol {
             margin-left: 30px;
             font-size: 1.1rem;
         }
@@ -141,12 +147,33 @@
                 <li>Integrating with Prometheus and Grafana for monitoring and analytics.</li>
             </ul>
         </section>
+
+        <section>
+            <h3>Additional Resources</h3>
+            <p>For more detailed documentation, you can explore the following links:</p>
+            <ul>
+                <li><a href="https://kubernetes.io/docs/" target="_blank" style="color: #ff6347;">Kubernetes Documentation</a></li>
+                <li><a href="https://www.docker.com/resources/what-container" target="_blank" style="color: #ff6347;">Docker Overview</a></li>
+                <li><a href="https://prometheus.io/docs/" target="_blank" style="color: #ff6347;">Prometheus Documentation</a></li>
+                <li><a href="https://grafana.com/docs/" target="_blank" style="color: #ff6347;">Grafana Documentation</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>FAQs</h3>
+            <ul>
+                <li><strong>What is KubEdge?</strong> KubEdge is a cloud computing platform built with Kubernetes and Docker that streamlines deployment, orchestration, and management of applications at scale.</li>
+                <li><strong>How do I install KubEdge?</strong> You can follow the installation steps mentioned in the 'Installation and Setup' section of this documentation.</li>
+                <li><strong>What is the role of Prometheus and Grafana in KubEdge?</strong> These tools provide real-time monitoring and visualization of application performance and cloud infrastructure metrics.</li>
+            </ul>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>© 2024 KubEdge | All Rights Reserved | Created by <a href="mailto:deveshrathore13@gmail.com">Devesh Singh Rathore</a></p>
     </footer>
+
 </body>
 
 </html>
