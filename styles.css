@@ -90,7 +90,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px; /* Increased gap for more spacing between cards */
+  gap: 50px; /* Increased gap between the cards for more spacing */
   margin-top: 20px;
 }
 
@@ -99,6 +99,15 @@ footer {
   width: 150px;
   margin-bottom: 30px;
 }
+
+.tools-card img {
+  max-width: 100px; /* Keep tool logos consistent */
+  height: auto;
+  margin-bottom: 20px; /* Increased bottom margin to add more space */
+  margin-left: 20px;  /* Optional: Add left margin to further separate images */
+  margin-right: 20px; /* Optional: Add right margin for spacing */
+}
+
 
 
 
