@@ -90,7 +90,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px; /* Increased gap for more spacing between cards */
   margin-top: 20px;
 }
 
@@ -99,6 +99,7 @@ footer {
   width: 150px;
   margin-bottom: 30px;
 }
+
 
 /* AOS Animation */
 [data-aos] {
