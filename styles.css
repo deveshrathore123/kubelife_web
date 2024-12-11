@@ -13,38 +13,59 @@ body {
   position: relative;
   background-color: #1d1f23;
   color: white;
-  background-image: url('images/background_image.jpg'); /* Added background image */
-  background-size: cover; /* Make sure the image covers the screen */
-  background-position: center; /* Center the background image */
-  background-attachment: fixed; /* Make the background fixed while scrolling */
+  background-image: url('images/background_image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Header */
+header {
+  background-color: #343a40;
+  padding: 15px;
+}
+
+header h1 {
+  color: #fff;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+header nav a:hover {
+  color: #1abc9c;
 }
 
 /* Hero Section */
 .hero {
-  /* Remove opacity and black background */
-  color: white;
   padding: 60px 20px;
   text-align: center;
   margin-bottom: 40px;
-  border-radius: 10px;
 }
 
 .hero-title {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 20px;
-  color: #1abc9c; /* Set hero section heading color */
+  color: #1abc9c;
 }
 
 .hero-description {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 30px;
 }
 
+.hero-description .highlight {
+  color: #f39c12;
+}
+
 /* Logo size adjustments */
 .logo-size {
-  max-width: 100px; /* Resize logo */
+  max-width: 120px;
   height: auto;
   margin-bottom: 20px;
   transition: transform 0.3s ease;
@@ -59,18 +80,17 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px; /* Increased gap between the cards for more spacing */
+  gap: 30px;
   margin-top: 20px;
 }
 
 .tools-card {
   text-align: center;
-  width: 150px;
-  margin-bottom: 30px;
+  width: 180px;
 }
 
 .tools-card img {
-  max-width: 100px; /* Keep tool logos consistent */
+  max-width: 100px;
   height: auto;
   margin-bottom: 20px;
 }
@@ -84,14 +104,12 @@ body {
 .tools-card p {
   font-size: 1rem;
   color: #a7a7a7;
-  line-height: 1.5;
 }
 
 /* Footer styles */
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  background-color: #343a40;
+  color: #fff;
   padding: 30px 0;
 }
 
@@ -102,4 +120,16 @@ footer {
 .footer-logo {
   max-width: 80px;
   height: auto;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer a {
+  color: #1abc9c;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
