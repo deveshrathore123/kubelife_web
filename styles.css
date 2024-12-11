@@ -22,7 +22,7 @@ body {
 /* Header */
 header {
   background-color: #343a40;
-  padding: 20px;
+  padding: 30px 0;
 }
 
 header h1 {
@@ -36,27 +36,28 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #1abc9c;
+  color: #3498db; /* Changed hover color to a user-friendly blue */
 }
 
 /* Hero Section */
 .hero {
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #ff7f50; /* Updated heading color for contrast with blue */
+  color: #3498db; /* Updated color to a vibrant blue */
 }
 
 .hero-description {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 30px;
+  color: #fff; /* Keep it white for contrast */
 }
 
 .hero-description .highlight {
@@ -80,13 +81,13 @@ header nav a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 40px;
+  gap: 60px; /* Increased gap */
+  margin-top: 60px;
 }
 
 .tools-card {
   text-align: center;
-  width: 200px;
+  width: 220px;
 }
 
 .tools-card img {
@@ -96,7 +97,7 @@ header nav a:hover {
 }
 
 .tools-card h4 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -128,7 +129,7 @@ footer p {
 }
 
 footer a {
-  color: #1abc9c;
+  color: #3498db; /* Updated to match header color */
 }
 
 footer a:hover {
