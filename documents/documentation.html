@@ -56,7 +56,7 @@
 
         h2,
         h3 {
-            color: #16a085; /* Soft teal color */
+            color: #000000; /* Black for headings */
             text-align: center;
             margin-top: 40px;
             font-size: 2.2rem;
@@ -93,6 +93,24 @@
             font-family: 'Courier New', monospace;
             color: #f1f1f1;
             margin-top: 20px;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background-color: #16a085;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background-color: #1abc9c;
         }
 
         /* Button Styling */
@@ -184,7 +202,9 @@
                 <li>Ensure Docker is installed on your machine.</li>
                 <li>Install Kubernetes using Minikube or any preferred method.</li>
                 <li>Clone the KubEdge repository from GitHub:</li>
-                <pre><code>git clone https://github.com/deveshrathore123/kubedge_server.git</code></pre>
+                <pre><code>git clone https://github.com/deveshrathore123/kubedge_server.git</code>
+                    <button class="copy-btn" onclick="copyCode()">Copy</button>
+                </pre>
                 <li>Run the deployment scripts and follow the setup guide in the repository.</li>
             </ol>
             <a href="https://github.com/deveshrathore123/kubedge_server.git" class="btn" target="_blank">Get KubEdge</a>
@@ -198,6 +218,16 @@
                 <li>Scales applications based on load.</li>
                 <li>Integrates with Prometheus for real-time monitoring and Grafana for data visualization.</li>
                 <li>Provides robust logging, alerting, and monitoring features.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Advanced Features</h3>
+            <p>KubEdge includes advanced features that help users deploy, monitor, and scale applications effectively:</p>
+            <ul>
+                <li><strong>Edge Computing Support:</strong> KubEdge allows you to run applications close to the data source for better latency and efficiency.</li>
+                <li><strong>AI and ML Integration:</strong> With KubEdge, you can deploy AI/ML models directly at the edge to process data in real-time.</li>
+                <li><strong>Seamless Scaling:</strong> Kubernetes' inherent scaling abilities allow for dynamic scaling based on demand.</li>
             </ul>
         </section>
 
@@ -218,6 +248,7 @@
                 <li><strong>What is KubEdge?</strong> A cloud-native platform built with Kubernetes and Docker to simplify deployment and management of containerized applications.</li>
                 <li><strong>How do I install KubEdge?</strong> Follow the step-by-step guide in the 'Installation and Setup' section.</li>
                 <li><strong>Why use Prometheus and Grafana?</strong> These tools provide powerful monitoring and visualization for cloud infrastructure and application performance.</li>
+                <li><strong>Can I deploy KubEdge on any cloud?</strong> Yes, KubEdge is compatible with all major cloud providers, including AWS, Google Cloud, and Azure.</li>
             </ul>
         </section>
     </main>
@@ -227,6 +258,18 @@
         <p>© 2024 KubEdge | Created by <a href="mailto:deveshrathore13@gmail.com">Devesh Singh Rathore</a></p>
     </footer>
 
+    <script>
+        function copyCode() {
+            var code = document.querySelector("pre code");
+            var textArea = document.createElement("textarea");
+            textArea.value = code.innerText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            alert("Code copied to clipboard!");
+        }
+    </script>
 </body>
 
 </html>
