@@ -19,26 +19,9 @@ body {
   background-attachment: fixed; /* Make the background fixed while scrolling */
 }
 
-/* Remove background video CSS since it is no longer needed */
-#background-video {
-  display: none;
-}
-
-/* Header styles */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px;
-}
-
-a {
-  text-decoration: none;
-}
-
 /* Hero Section */
 .hero {
-  background: rgba(0, 0, 0, 0.7);
+  /* Remove opacity and black background */
   color: white;
   padding: 60px 20px;
   text-align: center;
