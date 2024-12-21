@@ -17,24 +17,124 @@
 <body>
 
     <!-- Header -->
-    <header class="bg-dark text-white p-4">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-             <img src="images/logo.png" alt="KubEdge Logo" class="img-fluid mb-4 logo-size">
-            <nav>
-                <a href="#about" class="text-white me-3">About</a>
-                <a href="#documentation" class="text-white">Documentation</a>
-            </nav>
-        </div>
-    </header>
+   <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light only">
+  <meta name="description" content="KubeEdge - Unlock Hosting at the EDGE">
+  <title>KubeEdge</title>
+
+  <style>
+    body {
+      font-family: 'Gloock', serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #000000; /* Black background */
+      color: #FFFFFF; /* White text color */
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Title and tagline with custom font style */
+    .header-title {
+      font-family: 'Gloock', serif; /* Use Gloock font */
+      font-size: 3em;
+      font-weight: 400;
+      letter-spacing: 0.35rem;
+      text-indent: 1.125rem;
+      line-height: 1.375;
+      color: #FFFFFF; /* White color for text */
+      width: calc(100% + 0.35rem);
+    }
+
+    .header-tagline {
+      font-family: 'Gloock', serif;
+      font-size: 1.25em;
+      font-weight: 400;
+      letter-spacing: 0.35rem;
+      text-indent: 1.125rem;
+      line-height: 1.375;
+      color: #FFFFFF;
+      width: calc(100% + 0.35rem);
+    }
+
+    /* Navigation Menu */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f39c12;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+      }
+
+      nav ul li {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div>
+      <div class="header-title">KubeEdge</div>
+      <div class="header-tagline">Unlock Hosting at the EDGE</div>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <nav>
+      <ul>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#customers">Customers</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#docs">Docs</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <!-- Main Content -->
     <main class="container my-5">
         <!-- Hero Section -->
         <section class="hero text-center" data-aos="fade-in">
-            <img src="images/logo.png" alt="KubEdge Logo" class="img-fluid mb-4 logo-size">
-            <h1 class="hero-title display-3 text-uppercase" style="color: #333;">KubEdge</h1>
-            <p class="hero-description lead fs-4 mt-3 mb-4 text-dark">Unlock Hosting at the EDGE</p>
-            <a href="#documentation" class="btn btn-dark btn-lg mt-3 px-5 py-3 shadow-lg" style="font-size: 1.2rem;">Learn More</a>
+            <a href="#documentation" class="btn btn-dark btn-lg mt-3 px-5 py-3 shadow-lg" style="font-size: 1.2rem;">Dashboard</a>
         </section>
 
         <!-- Tools Section -->
