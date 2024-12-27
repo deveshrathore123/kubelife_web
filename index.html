@@ -88,6 +88,26 @@
                 color: #f39c12;
             }
 
+            /* Footer Styling */
+            footer {
+                background-color: #000000; /* Black background for footer */
+                color: #FFFFFF; /* White text color for footer */
+                padding: 20px;
+                text-align: center;
+            }
+
+            footer .footer-links a,
+            footer .contact-info a {
+                color: #FFFFFF;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            footer .footer-links a:hover,
+            footer .contact-info a:hover {
+                color: #f39c12; /* Gold color on hover */
+            }
+
             /* Responsive Design */
             @media (max-width: 768px) {
                 header {
@@ -113,6 +133,7 @@
             }
         </style>
     </head>
+
     <body>
 
     <!-- Header Section -->
@@ -251,4 +272,28 @@
         
     </main>
 
-    
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid">
+            <h3>KubEdge</h3>
+            <p>"Unlock Hosting at the Edge" | Founder & Creator: Devesh Singh Rathore</p>
+
+            <div class="footer-links">
+                <a href="#">About</a> |
+                <a href="#">Careers</a> |
+                <a href="#">Contact Us</a> |
+                <a href="#">Cookies, Terms, & Privacy</a> |
+                <a href="#">Help</a>
+            </div>
+
+            <div class="contact-info">
+                <p>Email: <a href="mailto:deveshrathore13@gmail.com">deveshrathore13@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/deveshrathore123/kubelife_server.git" target="_blank">kubelife_server</a></p>
+            </div>
+
+            <p>&copy; 2024 KubEdge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
