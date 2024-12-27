@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,36 +18,130 @@
 <body>
 
     <!-- Header -->
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="logo" class="img-fluid">
-        </div>
-        <!-- Navigation Menu -->
-        <nav>
-            <ul>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#customers">Customers</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#docs">Docs</a></li>
-                <li><a href="#changelog">Changelog</a></li>
-                <li><a href="#careers">Careers</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+   <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light only">
+  <meta name="description" content="KubeEdge - Unlock Hosting at the EDGE">
+  <title>KubeEdge</title>
+
+  <style>
+    body {
+      font-family: 'Gloock', serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #000000; /* Black background */
+      color: #FFFFFF; /* White text color */
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Title and tagline with custom font style */
+    .header-title {
+      font-family: 'Gloock', serif; /* Use Gloock font */
+      font-size: 3em;
+      font-weight: 400;
+      letter-spacing: 0.35rem;
+      text-indent: 1.125rem;
+      line-height: 1.375;
+      color: #FFFFFF; /* White color for text */
+      width: calc(100% + 0.35rem);
+    }
+
+    .header-tagline {
+      font-family: 'Gloock', serif;
+      font-size: 1.25em;
+      font-weight: 400;
+      letter-spacing: 0.35rem;
+      text-indent: 1.125rem;
+      line-height: 1.375;
+      color: #FFFFFF;
+      width: calc(100% + 0.35rem);
+    }
+
+    /* Navigation Menu */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f39c12;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+      }
+
+      nav ul li {
+        margin-bottom: 10px;
+      }
+        .logo {
+    width: 200px;
+    height: auto;
+}
+        .logo img {
+            width="100%";
+        
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+         <div class="logo">
+          <img src="images/logo.png" alt="logo" class="img-fluid">
+      </div>
+    
+    
+    <!-- Navigation Menu -->
+
+    <nav>
+      <ul>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#customers">Customers</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#docs">Docs</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <!-- Main Content -->
     <main class="container my-5">
         <!-- Hero Section -->
-        <section class="hero-section" style="position: relative; background-image: url('images/background.png'); background-size: cover; background-position: center; height: 100vh; opacity: 0.85;">
-            <div class="hero-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.4); z-index: 1;"></div>
-            <div class="hero-content text-center text-white" style="position: relative; z-index: 2; padding-top: 10vh;">
-                <h1 style="font-size: 4rem;">Welcome to KubEdge</h1>
-                <p style="font-size: 1.5rem;">Revolutionizing Cloud Computing with Kubernetes and Docker</p>
-                <a href="#get-started" class="btn btn-light btn-lg mt-4">Get Started</a>
-            </div>
-        </section>
 
         <!-- CTA Section -->
         <section class="cta-section text-center py-4 mt-6" style="background-color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 200px; padding: 40px 20px;">
@@ -156,35 +251,113 @@
                 </div>
             </div>
         </section>
+
         
-        <!-- Footer -->
-        <footer>
-            <div class="container-fluid">
-                <h3>KubEdge</h3>
-                <p>"Unlock Hosting at the Edge" | Founder & Creator: Devesh Singh Rathore</p>
 
-                <div class="footer-links">
-                    <a href="#">About</a> |
-                    <a href="#">Careers</a> |
-                    <a href="#">Contact Us</a> |
-                    <a href="#">Cookies, Terms, & Privacy</a> |
-                    <a href="#">Help</a>
-                </div>
 
-                <div class="contact-info">
-                    <p>Email: <a href="mailto:deveshrathore13@gmail.com">deveshrathore13@gmail.com</a></p>
-                    <p>GitHub: <a href="https://github.com/deveshrathore123/kubelife_server.git" target="_blank">KubEdge GitHub</a></p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/devesh-singh-rathore" target="_blank">Devesh Singh Rathore</a></p>
-                </div>
-            </div>
-        </footer>
-    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KubEdge</title>
+  <style>
+    /* Styling remains the same */
+    body {
+      line-height: 1;
+      background-color: #242426;
+      color: #fff;
+     font-family: 'Gloock', serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-attachment: scroll;
+      background-size: 318px, auto;
+      background-position: center, 0% 0%;
+      background-repeat: repeat, repeat;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin: 100px 0 !important;
+      padding: 30px;
+      font-family: 'Gloock', serif;
+    }
+
+    footer h3 {
+      color: #fff;
+      font-size: 30px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    footer .footer-links {
+      margin: 20px 0;
+    }
+
+    footer .footer-links a {
+      margin: 0 20px;
+      color: #fff;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer .footer-links a:hover {
+      color: #f39c12;
+    }
+
+    footer .contact-info {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    footer .contact-info a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer .contact-info a:hover {
+      color: #f39c12;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Your main content here -->
+
+  <footer>
+<div class="contanier-fluid">
+        <h3>KubEdge</h3>
+    <p>"Unlock Hosting at the Edge" | Founder & Creator: Devesh Singh Rathore</p>
+
+    <div class="footer-links">
+      <a href="#">About</a> |
+      <a href="#">Careers</a> |
+      <a href="#">Contact Us</a> |
+      <a href="#">Cookies, Terms, & Privacy</a> |
+      <a href="#">Help</a>
+    </div>
+
+    <div class="contact-info">
+      <p>Email: <a href="mailto:deveshrathore13@gmail.com">deveshrathore13@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/deveshrathore123/kubelife_server.git" target="_blank">kubelife_server</a></p>
+    </div>
+
+    <p>&copy; 2024 KubEdge. All rights reserved.</p>
+</div>
+  </footer>
 </body>
-
 </html>
