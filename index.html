@@ -406,29 +406,210 @@
     </div>
 </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-links">
-            <p><a href="#about">About</a> | <a href="#contact">Contact</a> | <a href="#privacy-policy">Privacy Policy</a></p>
-        </div>
-        <div class="contact-info">
-            <p>Email us at: <a href="mailto:support@kubedge.com">support@kubedge.com</a></p>
-            <p>Follow us on social media: 
-                <a href="https://twitter.com/kubedge" target="_blank"><i class="fab fa-twitter"></i></a> 
-                <a href="https://facebook.com/kubedge" target="_blank"><i class="fab fa-facebook"></i></a>
-            </p>
-        </div>
-        <p>&copy; 2024 KubEdge. All Rights Reserved.</p>
-    </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light only">
+    <meta name="description" content="KubeEdge - Unlock Hosting at the EDGE">
+    <title>KubeEdge</title>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <style>
+        body {
+            font-family: 'Gloock', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #000000; /* Black background */
+            color: #FFFFFF; /* White text color */
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-family: 'Gloock', serif;
+            font-size: 3em;
+            font-weight: 400;
+            letter-spacing: 0.35rem;
+            text-indent: 1.125rem;
+            line-height: 1.375;
+            color: #FFFFFF;
+            width: calc(100% + 0.35rem);
+        }
+
+        .header-tagline {
+            font-family: 'Gloock', serif;
+            font-size: 1.25em;
+            font-weight: 400;
+            letter-spacing: 0.35rem;
+            text-indent: 1.125rem;
+            line-height: 1.375;
+            color: #FFFFFF;
+            width: calc(100% + 0.35rem);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #000000; /* Black background for footer */
+            color: #FFFFFF; /* White text color for footer */
+            padding: 40px 20px;
+            font-family: 'Gloock', serif;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        footer h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        footer .footer-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer .footer-links a,
+        footer .social-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+
+        footer .footer-links a:hover,
+        footer .social-links a:hover {
+            color: #800080; /* Purple color on hover */
+        }
+
+        footer .social-links i {
+            margin-right: 10px;
+            font-size: 20px;
+            color: #f39c12;
+        }
+
+        footer .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        footer .footer-links li a {
+            font-size: 16px;
+        }
+
+        footer .social-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap; /* Allow wrap in smaller screen sizes */
+        }
+
+        footer .social-links a {
+            font-size: 24px;
+        }
+
+        footer .contact-info {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        footer .contact-info a {
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            footer {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            footer h3 {
+                text-align: center;
+            }
+
+            footer .social-links {
+                justify-content: center;
+                margin-top: 15px;
+            }
+
+            footer .contact-info {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-title">KubeEdge</div>
+    <div class="header-tagline">Unlock Hosting at the EDGE</div>
+</header>
+
+<!-- Footer -->
+<footer>
+    <!-- First Column -->
+    <div class="footer-section">
+        <h3>Replit</h3>
+        <ul class="footer-links">
+            <li><a href="#">Mobile App</a></li>
+            <li><a href="#">Desktop App</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Second Column -->
+    <div class="footer-section">
+        <h3>Legal & Privacy</h3>
+        <ul class="footer-links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Teams Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </div>
+
+    <!-- Third Column -->
+    <div class="footer-section">
+        <h3>Social Media</h3>
+        <div class="social-links">
+            <a href="#" title="X / Twitter"><i class="fab fa-twitter"></i> X / Twitter</a>
+            <a href="#" title="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </div>
+
+    <!-- Fourth Column -->
+    <div class="footer-section">
+        <h3>Contact Us</h3>
+        <div class="contact-info">
+            <a href="mailto:deveshrathore13@gmail.com">Email: deveshrathore13@gmail.com</a>
+            <a href="#">Creator: Devesh Rathore</a>
+        </div>
+    </div>
+</footer>
+
+<!-- FontAwesome CDN for social media icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
-
 </html>
+
