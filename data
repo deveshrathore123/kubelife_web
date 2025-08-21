@@ -1,0 +1,58 @@
+Here’s the step-by-step workflow I suggest (so you don’t get lost):
+
+🔹 Phase 1 – Setup (Today)
+
+Install Cisco Packet Tracer on Ubuntu (I’ll guide you with commands).
+
+Create the basic topology (HQ with 4 departments + WAN link + external server site).
+
+Save the .pkt file → take SS01: DFS HQ topology layout.
+
+🔹 Phase 2 – LAN Design
+
+Do subnetting for HR, IS, CC, MK, IT.
+
+Create your Subnet Table (Excel or Word). → SS02
+
+Configure VLANs + VLAN Trunking + Inter-VLAN Routing on the MLSW (Multi-Layer Switch). → SS03–SS05.
+
+🔹 Phase 3 – Servers
+
+Configure DHCP (assign IP ranges). → SS06
+
+Configure DNS (map web/email domains). → SS07
+
+Configure Web & Email server on external site. → SS08.
+
+🔹 Phase 4 – WAN + Routing
+
+Configure OSPF dynamic routing on HQ router + Server router. → SS09–SS10.
+
+Test connectivity between LANs and Server site.
+
+🔹 Phase 5 – Security
+
+Configure IPSec VPN tunnel between HR dept. & external site. → SS11.
+
+Ping test from HR-PC to Web Server (secure tunnel proof). → SS12.
+
+Configure ACLs (firewall-like rules to restrict traffic). → extra screenshots.
+
+🔹 Phase 6 – Documentation (Word Report)
+
+Section 1 – Research (30%) → 1200 words (network design principles, OSI layer security).
+
+Section 2 – Design (20%) → 800 words (all Packet Tracer configs + your screenshots).
+
+Section 3 – Evaluation (20%) → 800 words (ACL, VPN effectiveness, hardening).
+
+Section 4 – Ethical (30%) → 1200 words (CIA, GDPR, BCS Code of Conduct).
+
+Add references → APA/Harvard.
+
+📌 You already asked: “Where do I find HQ-MLSW?”
+➡️ In Packet Tracer, go to Switches → 3560-24PS (Multilayer Switch) → that is your HQ-MLSW.
+
+👉 Question for you before I start step-by-step with commands:
+Do you want me to (a) guide you while you configure each step and take your own screenshots,
+or (b) prepare a full .pkt file + Word report template with SS placeholders so you just replace them with your own screenshots?
