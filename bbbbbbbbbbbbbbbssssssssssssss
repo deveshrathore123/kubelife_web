@@ -1,0 +1,190 @@
+📌 Breakdown of Points + Screenshots
+Task 1 (LO1) – 15%
+
+a) Key Security Challenges
+
+Cable tapping & physical eavesdropping
+
+Switch flooding & MAC spoofing
+
+IP spoofing & man-in-the-middle
+
+Port scanning & open port exploitation
+
+Session hijacking, token theft
+
+SSL/TLS downgrade attacks
+
+Malicious file uploads
+
+Cloud-specific risks (misconfig S3, weak IAM)
+
+Insider threats & social engineering
+
+b) Significance of Pen Testing for Synergic Solutions Ltd.
+
+Proactive identification of risks
+
+Compliance (ISO 27001, NIST, GDPR)
+
+Helps prevent service outages & data loss
+
+Informs business continuity planning
+
+Builds client trust
+
+🔹 Screenshots (2–3):
+
+Ubuntu terminal showing nmap basic scan
+
+Example open ports scan (nmap -sS target)
+
+System info (uname -a) to show lab base
+
+Task 2 (LO1, LO2) – 30%
+
+a) Penetration Testing Plan (aligned to standards like OSSTMM, PTES, NIST 800-115):
+
+Phase 1: Reconnaissance – footprinting, WHOIS, nmap
+
+Phase 2: Scanning & Enumeration – nikto, enum4linux, dirb
+
+Phase 3: Exploitation – sqlmap, hydra brute force
+
+Phase 4: Post-Exploitation – privilege escalation, persistence
+
+Phase 5: Reporting – document findings, screenshots, CVSS scoring
+
+b) Simulated Penetration Test
+
+Target: Local VM with Apache + DVWA (Damn Vulnerable Web App)
+
+Tests to run:
+
+Port scanning (nmap)
+
+Web server vulnerabilities (nikto)
+
+SQL injection (sqlmap)
+
+Password brute force (hydra against SSH or DVWA login)
+
+SSL/TLS test (openssl / testssl.sh)
+
+🔹 Screenshots (10–12):
+
+nmap scan with open ports highlighted
+
+nikto output against Apache
+
+sqlmap showing DB enumeration attempt
+
+hydra SSH brute force demo (failed attempts only, ethical)
+
+dirb/gobuster directory brute force
+
+testssl.sh run against local site
+
+Apache running (systemctl status apache2)
+
+DVWA login page in browser
+
+Exploit attempt (sqlmap injection)
+
+Snort alert log capture
+
+Packet capture with Wireshark (show SYN flood attempt)
+
+Evidence of vulnerabilities documented in terminal
+
+Task 3 (LO1, LO2, LO3) – 15%
+
+a) Network Hardening Plan
+
+Disable unused ports/services
+
+Strong firewall rules (UFW, iptables)
+
+VLAN segmentation for offices
+
+Enforce TLS 1.3 & disable weak ciphers
+
+Use IDS/IPS (Snort, Suricata)
+
+Regular patching + automated updates
+
+MFA for staff logins
+
+Secure backups (encrypted S3, offsite)
+
+b) Implementation Steps
+
+Change rollout plan → test in staging, deploy gradually
+
+Communication with users (maintenance window)
+
+Use automation (Ansible) for consistency
+
+Monitor logs for unexpected issues
+
+Rollback plan ready
+
+🔹 Screenshots (5–6):
+
+ufw status with active rules
+
+Snort running in IDS mode
+
+/etc/ssh/sshd_config edited for stronger auth
+
+TLS cert installed with certbot
+
+Example of blocked port attempt in logs
+
+OS updates (apt upgrade)
+
+Task 4 (LO1, LO2, LO3, LO4) – 20%
+
+a) Cloud App Security & Continuity
+
+Risks: weak IAM, misconfigured S3, DDoS, insider misuse
+
+Strengths: scalability, redundancy, snapshots
+
+Recommendations:
+
+IAM least privilege
+
+S3 bucket encryption + versioning
+
+WAF + CloudTrail logging
+
+Container scanning (Trivy)
+
+Regular DR drills
+
+b) Ethical Considerations
+
+Obtain written authorization before tests
+
+Protect client data, anonymize sensitive info
+
+Confidential reporting (need-to-know basis)
+
+Avoid production disruption
+
+Comply with GDPR & Computer Misuse Act
+
+🔹 Screenshots (5–6):
+
+Docker container running (docker ps)
+
+trivy scan output of Docker image
+
+AWS CLI (or local simulation with MinIO) showing bucket policy
+
+Encrypted S3/MinIO bucket screenshot
+
+certbot TLS certificate active
+
+CloudTrail logs / equivalent simulated logs
