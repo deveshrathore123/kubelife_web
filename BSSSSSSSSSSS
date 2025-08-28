@@ -1,0 +1,110 @@
+Complete Practical Points & Screenshot Roadmap
+Task 1 – Security Challenges & Scope
+
+Check network interfaces & IP
+ip a → 📸 SS1
+
+Show open ports/services
+ss -tulnp → 📸 SS2
+
+Run basic nmap scan on your machine
+nmap -sS -sV -O <your-ip> → 📸 SS3
+
+Simulate ARP spoofing test (dsniff)
+arpspoof -i eth0 <gateway-ip> → 📸 SS4
+
+Task 2 – Penetration Testing
+
+Plan phases (Recon → Scanning → Exploitation → Reporting) in report (no SS).
+
+Reconnaissance
+
+Discover hosts on LAN
+nmap -sn 192.168.1.0/24 → 📸 SS5
+
+Scanning
+
+Full port scan
+nmap -sS -p- 192.168.1.x → 📸 SS6
+
+Service & version detection
+nmap -sV -p 22,80,443 192.168.1.x → 📸 SS7
+
+Exploitation Simulation
+
+Web vuln scan (Nikto)
+nikto -h http://192.168.1.x → 📸 SS8
+
+SQL injection test (SQLmap)
+sqlmap -u "http://192.168.1.x/vuln.php?id=1" --batch --dbs → 📸 SS9
+
+Password brute-force (Hydra)
+hydra -l admin -P /usr/share/wordlists/rockyou.txt ssh://192.168.1.x → 📸 SS10
+
+Task 3 – Network Hardening
+
+Enable firewall (UFW)
+sudo ufw enable + allow 22/80, deny 23 → 📸 SS11
+
+Show firewall rules
+sudo ufw status verbose → 📸 SS12
+
+Disable unused services
+systemctl disable telnet → 📸 SS13
+
+SSH hardening (/etc/ssh/sshd_config) → 📸 SS14
+
+Update & patch system
+sudo apt update && sudo apt upgrade -y → 📸 SS15
+
+Task 4 – Cloud Security & Continuity
+
+Show running Docker containers
+docker ps → 📸 SS16
+
+Scan container image with Trivy
+trivy image nginx:latest → 📸 SS17
+
+Setup HTTPS cert (Let’s Encrypt)
+sudo certbot certonly --standalone -d example.com → 📸 SS18
+
+Backup to S3 (or mock bucket)
+aws s3 cp /var/www/html s3://mybackup-bucket/ --recursive → 📸 SS19
+
+Run Snort IDS
+snort -A console -q -c /etc/snort/snort.conf -i eth0 → 📸 SS20
+
+Extra Screenshots to Reach ~30
+
+Show ping test & traceroute → 📸 SS21
+
+Display system users & groups (cat /etc/passwd) → 📸 SS22
+
+Show file permissions hardening (chmod 600 ~/.ssh/id_rsa) → 📸 SS23
+
+Demonstrate fail2ban installation (sudo apt install fail2ban) → 📸 SS24
+
+Show logs of blocked IPs (sudo fail2ban-client status sshd) → 📸 SS25
+
+Test DoS simulation (using hping3) → 📸 SS26
+
+Show iptables rules (sudo iptables -L -n -v) → 📸 SS27
+
+Show TLS certificate details (openssl s_client -connect example.com:443) → 📸 SS28
+
+Show cloud security group rules (AWS EC2) → 📸 SS29
+
+Final system security audit (lynis audit system) → 📸 SS30
+
+✅ Final Portfolio Evidence
+
+~30 screenshots inserted into report (with captions).
+
+Report text explains what, why, how for each step, plus analysis & recommendations.
+
+Summary (800 words) ties everything together with lessons learned.
+
+⚡ That’s your full checklist.
+Now you can just follow step by step, execute commands on Ubuntu, and take screenshots at each point.
+
+👉 Do you want me to now write the installation + environment setup guide (Ubuntu attacker + victim with DVWA), so you can actually start running these commands?
