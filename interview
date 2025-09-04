@@ -132,6 +132,15 @@ A: Plan = preview, Apply = execute.
 Q: What’s Terraform state file for?
 A: Tracks infra state.
 
+Q: What is the difference between count and for_each in Terraform?
+A: count uses numeric indexing; for_each uses map/set keys (better for tracking resource changes).
+
+Q: What is the purpose of a terraform.workspace?
+A: To manage multiple environments (like dev, staging, prod) using the same config but isolated state.
+
+Q: Explain the difference between local-exec and remote-exec provisioners.
+A: local-exec runs on the machine executing Terraform; remote-exec runs inside the provisioned resource.
+
 Q: ClusterIP vs NodePort?
 A: ClusterIP = internal, NodePort = external via node port.
 
