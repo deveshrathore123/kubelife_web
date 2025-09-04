@@ -82,6 +82,9 @@ A: To persist data outside containers.
 Q: One difference between Docker and VM?
 A: Docker shares OS kernel, VM has full OS.
 
+Q: What is the difference between a volume and a bind mount?
+A: Volume = managed by Docker, portable; Bind mount = direct host path mapping.
+
 🔹 Jenkins / CI-CD
 
 Q: CI vs CD?
@@ -144,8 +147,11 @@ A: local-exec runs on the machine executing Terraform; remote-exec runs inside t
 Q: ClusterIP vs NodePort?
 A: ClusterIP = internal, NodePort = external via node port.
 
-Q: Pod is CrashLoopBackOff — what’s your first check?
-A: kubectl logs / describe pod.
+Q: What are taints and tolerations?
+A: Taints repel pods from nodes; tolerations let pods bypass taints.
+
+Q: Difference between StatefulSet and Deployment?
+A: StatefulSet gives stable pod identity & storage; Deployment is stateless.
 
 🔹 Real Production Scenarios
 
