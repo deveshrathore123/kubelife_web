@@ -1,0 +1,82 @@
+Got it 👍 — you don’t want ready-made answers, just tough interview questions (not Q&A style).
+Here’s a production-focused question list you can directly ask Vikash in the interview, aligned with his resume.
+
+🔹 Linux & Shell Scripting
+
+How would you find which process is using the most memory on a Linux server?
+
+A cronjob you created didn’t run at 2 AM. Walk me through your debugging steps.
+
+Write a shell script to monitor disk usage and send an alert if it goes above 80%.
+
+What’s the difference between hard link and soft link, and when would you use each?
+
+🔹 AWS (Cloud)
+
+You deployed an application on EC2 with an ELB. Suddenly, one instance crashed. What happens next?
+
+How do you restrict an S3 bucket so only an EC2 in a private subnet can access it?
+
+Explain how you’d design a 3-tier (web, app, DB) architecture on AWS for high availability.
+
+How do you troubleshoot “Access Denied” errors when uploading to an S3 bucket?
+
+🔹 Docker & Containers
+
+A containerized app keeps restarting in production. How do you debug it?
+
+Explain the difference between CMD and ENTRYPOINT in a Dockerfile with examples.
+
+How do you reduce the size of a large Docker image?
+
+How would you securely pass database credentials into a container in production?
+
+🔹 Jenkins / CI-CD
+
+You set up a Jenkins pipeline with GitHub webhook. How do you prevent duplicate builds on the same commit?
+
+What’s your recovery plan if the Jenkins master server crashes?
+
+How do you move an artifact from dev → test → prod in a pipeline?
+
+Declarative vs Scripted pipelines in Jenkins — which one would you use in production and why?
+
+🔹 Monitoring & Logging
+
+How would you monitor latency, errors, and traffic for an application (RED method)?
+
+Your Grafana dashboard shows zero traffic, but the app is serving requests. How do you debug?
+
+Logs in Loki show a spike in errors, but the app team says everything is fine. How do you confirm?
+
+Compare push-based monitoring (CloudWatch) with pull-based monitoring (Prometheus). Which is better for microservices?
+
+🔹 Networking & Security
+
+A user in the US says your website isn’t resolving, but it works in India. How do you troubleshoot?
+
+Explain the difference between Security Groups and NACLs in AWS with real use cases.
+
+What steps would you take if the SSL certificate for your production app is expiring tonight?
+
+How would you protect a VPC-based application from DDoS attacks?
+
+🔹 Terraform / Kubernetes (he’s learning)
+
+What happens if two people run terraform apply at the same time? How do you avoid conflicts?
+
+If your Terraform state file is deleted, how do you recover your infrastructure?
+
+In Kubernetes, how do you expose a pod to the outside world? Explain NodePort, ClusterIP, and LoadBalancer.
+
+A pod is stuck in CrashLoopBackOff. How do you troubleshoot it?
+
+🔹 Real-World Production Scenarios
+
+Your app deployment succeeded, but 2 hours later CPU usage shot up to 90%. What steps do you take?
+
+How would you implement zero-downtime deployments in AWS?
+
+Your monitoring system is generating too many false alerts at night. How do you fix it without missing real issues?
+
+How would you design a secure CI/CD pipeline that includes GitHub, Jenkins, Docker, and AWS?
