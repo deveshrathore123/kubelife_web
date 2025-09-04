@@ -1,82 +1,153 @@
-Got it 👍 — you don’t want ready-made answers, just tough interview questions (not Q&A style).
-Here’s a production-focused question list you can directly ask Vikash in the interview, aligned with his resume.
+🔹 Very Basic Questions (Warm-up)
 
-🔹 Linux & Shell Scripting
+Q: What command shows your current working directory?
+A: pwd
 
-How would you find which process is using the most memory on a Linux server?
+Q: How do you list hidden files in Linux?
+A: ls -a
 
-A cronjob you created didn’t run at 2 AM. Walk me through your debugging steps.
+Q: How do you check the current running user?
+A: whoami
 
-Write a shell script to monitor disk usage and send an alert if it goes above 80%.
+Q: Which command shows system uptime?
+A: uptime
 
-What’s the difference between hard link and soft link, and when would you use each?
+Q: How do you see disk usage in human-readable format?
+A: df -h
 
-🔹 AWS (Cloud)
+Q: How do you check memory usage?
+A: free -m
 
-You deployed an application on EC2 with an ELB. Suddenly, one instance crashed. What happens next?
+Q: What is the default SSH port?
+A: 22
 
-How do you restrict an S3 bucket so only an EC2 in a private subnet can access it?
+Q: Difference between absolute path and relative path?
+A: Absolute = full path from root /, Relative = path from current directory.
 
-Explain how you’d design a 3-tier (web, app, DB) architecture on AWS for high availability.
+Q: What does chmod +x file.sh do?
+A: Makes the file executable.
 
-How do you troubleshoot “Access Denied” errors when uploading to an S3 bucket?
+Q: In AWS, what does EC2 stand for?
+A: Elastic Compute Cloud.
 
-🔹 Docker & Containers
 
-A containerized app keeps restarting in production. How do you debug it?
 
-Explain the difference between CMD and ENTRYPOINT in a Dockerfile with examples.
 
-How do you reduce the size of a large Docker image?
 
-How would you securely pass database credentials into a container in production?
+
+
+
+
+
+
+Linux & Shell
+
+Q: How to find which process is using the most memory?
+A: top / ps aux --sort=-%mem | head
+
+Q: Difference between kill -9 and kill -15?
+A: -15 = graceful, -9 = force kill.
+
+Q: What does chmod 755 file.sh mean?
+A: Owner full, group/others read+execute.
+
+Q: How to find open ports on a server?
+A: netstat -tulnp or ss -tulnp.
+
+🔹 AWS
+
+Q: Security Group vs NACL?
+A: SG = stateful, NACL = stateless.
+
+Q: Difference between EBS and S3?
+A: EBS = block storage, S3 = object storage.
+
+Q: What is Route53 used for?
+A: DNS service in AWS.
+
+Q: Spot instance vs On-demand instance?
+A: Spot = cheap, interruptible; On-demand = stable, costly.
+
+🔹 Docker
+
+Q: Difference between image and container?
+A: Image = template, Container = running instance.
+
+Q: What is multi-stage build in Docker?
+A: Build in steps to reduce image size.
+
+Q: Where are Docker volumes used?
+A: To persist data outside containers.
+
+Q: One difference between Docker and VM?
+A: Docker shares OS kernel, VM has full OS.
 
 🔹 Jenkins / CI-CD
 
-You set up a Jenkins pipeline with GitHub webhook. How do you prevent duplicate builds on the same commit?
+Q: CI vs CD?
+A: CI = integrate code, CD = deliver/deploy code.
 
-What’s your recovery plan if the Jenkins master server crashes?
+Q: Declarative vs Scripted pipeline?
+A: Declarative = structured, Scripted = flexible.
 
-How do you move an artifact from dev → test → prod in a pipeline?
+Q: How do you rollback a failed deployment?
+A: Use previous build/artifact.
 
-Declarative vs Scripted pipelines in Jenkins — which one would you use in production and why?
+Q: Jenkins master crashes — what’s your backup plan?
+A: Restore from backup config & jobs.
 
 🔹 Monitoring & Logging
 
-How would you monitor latency, errors, and traffic for an application (RED method)?
+Q: Logs vs Metrics?
+A: Logs = events, Metrics = numbers/trends.
 
-Your Grafana dashboard shows zero traffic, but the app is serving requests. How do you debug?
+Q: Push vs Pull monitoring?
+A: Push = agent sends, Pull = server scrapes.
 
-Logs in Loki show a spike in errors, but the app team says everything is fine. How do you confirm?
+Q: What’s an alert storm?
+A: Too many alerts at once → noise.
 
-Compare push-based monitoring (CloudWatch) with pull-based monitoring (Prometheus). Which is better for microservices?
+Q: RED method monitors what?
+A: Requests, Errors, Duration.
 
 🔹 Networking & Security
 
-A user in the US says your website isn’t resolving, but it works in India. How do you troubleshoot?
+Q: DNS A record vs CNAME?
+A: A = maps to IP, CNAME = alias.
 
-Explain the difference between Security Groups and NACLs in AWS with real use cases.
+Q: Default HTTPS port?
+A: 443.
 
-What steps would you take if the SSL certificate for your production app is expiring tonight?
+Q: What is a reverse proxy?
+A: Server that forwards client requests to backend servers.
 
-How would you protect a VPC-based application from DDoS attacks?
+Q: Difference between TLS and SSL?
+A: TLS = newer, secure version of SSL.
 
-🔹 Terraform / Kubernetes (he’s learning)
+🔹 Terraform / Kubernetes
 
-What happens if two people run terraform apply at the same time? How do you avoid conflicts?
+Q: Terraform plan vs apply?
+A: Plan = preview, Apply = execute.
 
-If your Terraform state file is deleted, how do you recover your infrastructure?
+Q: What’s Terraform state file for?
+A: Tracks infra state.
 
-In Kubernetes, how do you expose a pod to the outside world? Explain NodePort, ClusterIP, and LoadBalancer.
+Q: ClusterIP vs NodePort?
+A: ClusterIP = internal, NodePort = external via node port.
 
-A pod is stuck in CrashLoopBackOff. How do you troubleshoot it?
+Q: Pod is CrashLoopBackOff — what’s your first check?
+A: kubectl logs / describe pod.
 
-🔹 Real-World Production Scenarios
+🔹 Real Production Scenarios
 
-Your app deployment succeeded, but 2 hours later CPU usage shot up to 90%. What steps do you take?
+Q: EC2 100% CPU — first command?
+A: top.
 
-How would you implement zero-downtime deployments in AWS?
+Q: SSL cert expiring tonight — action?
+A: Renew & reload server.
 
-Your monitoring system is generating too many false alerts at night. How do you fix it without missing real issues?
+Q: Jenkins job stuck in queue — check what?
+A: Agent/executor availability.
 
-How would you design a secure CI/CD pipeline that includes GitHub, Jenkins, Docker, and AWS?
+Q: Deployment succeeded, CPU spiked later — what do you check first?
+A: Logs + monitoring for abnormal traffic/process.
